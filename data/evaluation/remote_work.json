@@ -1,0 +1,79 @@
+[
+{
+"case_id": "RW-001",
+"employee": "Rahul Sharma",
+"department": "Engineering",
+"request": "I am applying for a Remote Work Agreement. I have been with NovaTech for 2 years. I have submitted the request via the HR portal, and both my manager and HRBP have documented their approval. I will work from my home office which has a door that can be closed. I will be online and available from 10:00 AM to 3:00 PM local time. My internet speed test shows 150 Mbps download and 25 Mbps upload. I will strictly use my company-issued laptop connected to the corporate VPN, and my children are enrolled in full-time daycare.",
+"reason": "Employee is requesting a standard remote work arrangement and has provided all necessary details.",
+"relevant_policy": "Remote Work Policy",
+"relevant_sections": [
+"4.1",
+"4.2",
+"4.3",
+"4.4",
+"4.5",
+"4.6",
+"4.7",
+"4.8"
+],
+"expected_verdict": "COMPLIANT",
+"explanation": "The request satisfies all conditions: 90-day tenure met (4.1), proper portal approvals obtained (4.2), core hours committed (4.3), private workspace confirmed (4.4), internet speeds exceed the 50/10 Mbps minimum (4.5), company hardware and VPN are used (4.6, 4.7), and dependent care is arranged (4.8)."
+},
+{
+"case_id": "RW-002",
+"employee": "Priya Patel",
+"department": "Marketing",
+"request": "I have submitted my RWA in the HR portal and received manager and HRBP approval. I have been here 18 months, my kids are in school, and I have a dedicated office with a door. I will work the core hours of 10 AM to 3 PM. Since my company laptop has been freezing, I will be conducting my remote work exclusively on my personally owned MacBook Pro. I have a 300 Mbps internet connection and will use the company VPN.",
+"reason": "Employee is requesting remote work but intends to use a personal device.",
+"relevant_policy": "Remote Work Policy",
+"relevant_sections": [
+"4.6"
+],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "The request explicitly violates Section 4.6, which strictly prohibits processing corporate data on personally owned computing devices and mandates the exclusive use of NovaTech Solutions-issued hardware."
+},
+{
+"case_id": "RW-003",
+"employee": "David Kim",
+"department": "Finance",
+"request": "I am requesting approval for remote work. I have been with the company for 3 years. I submitted the request via the HR portal and it was approved by my manager and HRBP. I have a dedicated office with a door, 500 Mbps internet, and will use my company laptop and VPN. I will be online from 10 AM to 3 PM. This arrangement is perfect because it will allow me to act as the primary caregiver for my 2-year-old daughter during my shift instead of paying for daycare.",
+"reason": "Employee meets technical and procedural requirements but intends to provide child care while working.",
+"relevant_policy": "Remote Work Policy",
+"relevant_sections": [
+"4.2",
+"4.4",
+"4.5",
+"4.6",
+"4.8"
+],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "While the employee meets the tenure, approval, connectivity, and hardware requirements, the request violates Section 4.8, which states that remote work is not a substitute for dependent care and employees must have primary care arrangements in place during scheduled hours."
+},
+{
+"case_id": "RW-004",
+"employee": "Sarah Jenkins",
+"department": "Sales",
+"request": "I am submitting my Remote Work Agreement via the HR portal today. I have been at NovaTech for 2 years. I plan to use my company-issued laptop connected to the VPN to do my work from home.",
+"reason": "Employee is initiating a remote work request but omitted multiple key details required to determine full compliance.",
+"relevant_policy": "Remote Work Policy",
+"relevant_sections": [
+"4.2",
+"4.3",
+"4.4",
+"4.5"
+],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "The policy applies, but critical information is missing to grant approval. It is unknown if the manager and HRBP have approved it yet (4.2), if the employee will be online during core hours (4.3), if the workspace has a door (4.4), or if the internet meets the 50/10 Mbps minimum requirements (4.5)."
+},
+{
+"case_id": "RW-005",
+"employee": "Michael Chang",
+"department": "Human Resources",
+"request": "I need to order a new ergonomic desk chair and a secondary monitor for my cubicle at the downtown corporate office. Please let me know what the budget limit is for in-office furniture requests.",
+"reason": "Employee is asking about purchasing office furniture for a corporate office location.",
+"relevant_policy": "Remote Work Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "This request pertains to procurement and office furniture for a primary corporate facility. It has no applicability to the Remote Work Policy, which only governs employees working from alternative worksites."
+}
+]

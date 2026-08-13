@@ -1,0 +1,65 @@
+[
+{
+"case_id": "EC-001",
+"employee": "Aisha Patel",
+"department": "Design",
+"request": "I have submitted the Secondary Employment Request form to the HR portal for a weekend freelance design gig. I have attached the emails showing explicit written approval from both my direct manager and my HR representative.",
+"reason": "Requesting to take on outside employment.",
+"relevant_policy": "Employee Conduct Policy",
+"relevant_sections": [
+"4.2"
+],
+"expected_verdict": "COMPLIANT",
+"explanation": "The employee successfully followed Section 4.2 by submitting the formal request form to the HR portal and securing explicit written approval from both their direct manager and HR prior to accepting the outside employment."
+},
+{
+"case_id": "EC-002",
+"employee": "Marcus Johnson",
+"department": "Sales",
+"request": "I am heading to a scheduled in-person meeting with a prospective external client at their headquarters. Since it is extremely hot outside today, I am wearing business professional slacks and a dress shirt, but I left my blazer at the office.",
+"reason": "Attending an on-site client meeting.",
+"relevant_policy": "Employee Conduct Policy",
+"relevant_sections": [
+"4.9"
+],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "Section 4.9 explicitly requires employees to wear a tailored jacket or blazer when attending scheduled, in-person meetings with external clients, with no stated exceptions for weather."
+},
+{
+"case_id": "EC-003",
+"employee": "Liam Chen",
+"department": "Customer Support",
+"request": "I woke up severely ill this morning and will miss my entire shift. I used the approved internal messaging platform to notify my manager 45 minutes before my shift was scheduled to begin.",
+"reason": "Notifying manager of an unplanned absence.",
+"relevant_policy": "Employee Conduct Policy",
+"relevant_sections": [
+"4.1"
+],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "The employee satisfied the communication method by using the approved internal messaging platform, but violated the timing requirement. Section 4.1 mandates notification at least 2 hours prior to the scheduled shift start time."
+},
+{
+"case_id": "EC-004",
+"employee": "Sarah Jenkins",
+"department": "Marketing",
+"request": "While waiting for my flight at the public airport terminal, I opened my company laptop to review our upcoming product launch strategy documents.",
+"reason": "Working in a public space while traveling.",
+"relevant_policy": "Employee Conduct Policy",
+"relevant_sections": [
+"4.6"
+],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "Section 4.6 requires a privacy screen filter when viewing Internal or Confidential data in public spaces. The request lacks information on whether the strategy documents are classified as Internal/Confidential, and it does not state whether the employee was using a privacy screen."
+},
+{
+"case_id": "EC-005",
+"employee": "David O'Connor",
+"department": "Finance",
+"request": "I need to request a standing desk and an ergonomic mouse for my home office to help prevent back and wrist strain during long hours of financial modeling.",
+"reason": "Requesting ergonomic furniture for remote work.",
+"relevant_policy": "Employee Conduct Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "The Employee Conduct Policy governs behavioral standards, relationships, and acceptable use of systems. It does not cover procedures for requesting ergonomic furniture, home office equipment, or medical accommodations."
+}
+]

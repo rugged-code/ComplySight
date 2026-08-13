@@ -1,0 +1,70 @@
+[
+{
+"case_id": "VND-001",
+"employee": "Sarah Jenkins",
+"department": "Data Analytics",
+"request": "I want to finalize the contract for DataCrush Inc., a new vendor that will process our Confidential analytics data. The annualized cost is $60,000. I have logged the approved Vendor Risk Assessment (VRA) in the procurement portal, obtained the signed Information Security Addendum (ISA) from their legal team, and attached the written approvals from the CFO and the Head of Procurement.",
+"reason": "To establish a new analytics vendor relationship.",
+"relevant_policy": "Vendor Management Policy",
+"relevant_sections": [
+"4.1",
+"4.2",
+"4.3"
+],
+"expected_verdict": "COMPLIANT",
+"explanation": "The request satisfies all requirements for a new vendor processing Confidential data and exceeding $50k: a VRA is logged (4.1), an ISA is signed (4.2), and both CFO and Head of Procurement approved the cost (4.3)."
+},
+{
+"case_id": "VND-002",
+"employee": "Marcus Thorne",
+"department": "Marketing",
+"request": "Please issue a purchase order for $75,000 to CreativeSpark Agency for our annual advertising campaign. The vendor does not handle any sensitive data, so no ISA is needed, and the VRA was approved and logged yesterday. I have the written approval from the Head of Procurement attached.",
+"reason": "To finalize the annual advertising agency contract.",
+"relevant_policy": "Vendor Management Policy",
+"relevant_sections": [
+"4.1",
+"4.2",
+"4.3"
+],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "The contract value exceeds the $50,000 threshold and therefore requires explicit written approval from both the Head of Procurement and the Chief Financial Officer (CFO). The request explicitly only includes approval from the Head of Procurement, violating section 4.3."
+},
+{
+"case_id": "VND-003",
+"employee": "Liam Patel",
+"department": "Human Resources",
+"request": "I am terminating the contract with our recruitment vendor, TalentFlow. I have submitted the de-provisioning ticket to IT Operations to revoke all their network access. I also sent them an email asking them to reply confirming that all our company data has been deleted from their systems within 30 days.",
+"reason": "To offboard a terminated vendor.",
+"relevant_policy": "Vendor Management Policy",
+"relevant_sections": [
+"4.8",
+"4.10"
+],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "The business owner satisfied the access revocation requirement by submitting the de-provisioning ticket (4.8). However, the request violates data return rules by only asking for an email confirmation, whereas the policy strictly requires a cryptographically signed Certificate of Data Destruction (4.10)."
+},
+{
+"case_id": "VND-004",
+"employee": "Jessica Lin",
+"department": "Facilities",
+"request": "Please generate a purchase order for our new office cleaning vendor, CleanCo. The total annualized contract value is $20,000. I have attached the signed contract and they will start on the 1st of next month.",
+"reason": "To hire a new cleaning service for the main office.",
+"relevant_policy": "Vendor Management Policy",
+"relevant_sections": [
+"4.1"
+],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "The request involves onboarding a new vendor, but it does not state whether a Vendor Risk Assessment (VRA) has been completed and logged in the centralized procurement portal, which is a mandatory prerequisite for all new vendors (4.1)."
+},
+{
+"case_id": "VND-005",
+"employee": "David O'Connor",
+"department": "Sales",
+"request": "I need to submit my travel expenses for last week's conference in Chicago, including flights, hotel, and meals with clients. Can you process this receipt for $1,200?",
+"reason": "To get reimbursed for a business trip.",
+"relevant_policy": "Vendor Management Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "The request relates to employee expense reimbursement, not the evaluation, selection, or management of third-party vendors covered by the Vendor Management Policy."
+}
+]

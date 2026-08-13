@@ -1,0 +1,65 @@
+[
+{
+"case_id": "DP-001",
+"employee": "Priya Patel",
+"department": "QA Engineering",
+"request": "I am preparing a new test environment for the upcoming release. I need to populate the QA database with recent customer data. I will run the standard automated data masking script to tokenize all PII before the data is copied over from production.",
+"reason": "Preparing a realistic testing environment for a software release.",
+"relevant_policy": "Data Protection Policy",
+"relevant_sections": [
+"4.5"
+],
+"expected_verdict": "COMPLIANT",
+"explanation": "The request explicitly states that an automated data masking script will be used before transferring PII to the non-production QA environment, which fully complies with Section 4.5."
+},
+{
+"case_id": "DP-002",
+"employee": "Mark Jenkins",
+"department": "Data Analytics",
+"request": "I need to share the raw European customer marketing dataset with our analytics team in the India office. I've added the transfer to the Global Transfer Registry, and I will send the CSV file via standard email so they can get started right away.",
+"reason": "Cross-team collaboration for global campaign analysis.",
+"relevant_policy": "Data Protection Policy",
+"relevant_sections": [
+"4.7"
+],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "While the transfer is logged in the Global Transfer Registry, sending the data via standard email violates the requirement in Section 4.7 that cross-border transfers utilize end-to-end AES-256 encryption."
+},
+{
+"case_id": "DP-003",
+"employee": "Sarah Lewis",
+"department": "Database Administration",
+"request": "I need direct write access to the production customer database to run an emergency cleanup script on corrupted PII records. I have attached the documented approval from my direct manager authorizing this access.",
+"reason": "Emergency database maintenance to fix corrupted records.",
+"relevant_policy": "Data Protection Policy",
+"relevant_sections": [
+"4.4"
+],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "The request satisfies the requirement for the direct manager's approval, but it is missing the mandatory dual approval from the Data Privacy Office (DPO) required by Section 4.4 for direct access to production databases containing PII."
+},
+{
+"case_id": "DP-004",
+"employee": "David Chen",
+"department": "Marketing",
+"request": "We are launching a new lead generation form on the website. I have set it up to collect the user's full name, email address, and their personal social media handles so we can better target our ad campaigns.",
+"reason": "Improving marketing campaign targeting through better lead generation.",
+"relevant_policy": "Data Protection Policy",
+"relevant_sections": [
+"4.2"
+],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "Section 4.2 requires collected PII fields to be explicitly designated as 'Required' in the Data Processing Register, or to have DPO approval if 'Optional'. The request does not provide this information, making compliance impossible to determine without it."
+},
+{
+"case_id": "DP-005",
+"employee": "Jessica Wong",
+"department": "Sales",
+"request": "I need to submit my receipts for the client lunch meeting we had yesterday. The total was $120, and I need to know the proper expense code to use.",
+"reason": "Submitting business expenses for a client meal.",
+"relevant_policy": "Data Protection Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "This request pertains to expense reimbursement and financial processing, which does not involve the handling, storage, or processing of PII covered under the Data Protection Policy."
+}
+]

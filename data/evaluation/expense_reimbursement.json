@@ -1,0 +1,57 @@
+[
+{
+"case_id": "EXP-001",
+"employee": "Rahul Sharma",
+"department": "Engineering",
+"request": "I am submitting my expense report for a domestic business trip to Chicago that ended 10 days ago. I booked an economy class flight for $350 and stayed two nights at a hotel for $200 per night. I used my corporate credit card for these expenses and have attached the itemized receipts for both. My direct manager has already approved the report in the system.",
+"reason": "To claim reimbursement for flights and hotel accommodations from a business trip.",
+"relevant_policy": "Expense & Reimbursement Policy",
+"relevant_sections": ["4.1", "4.2", "4.3", "4.4", "4.5", "4.9"],
+"expected_verdict": "COMPLIANT",
+"explanation": "The request satisfies all conditions: itemized receipts provided for expenses >$25 (4.1), submitted within 30 days (4.2), manager approved (4.3), domestic flight was economy class (4.4), hotel is under the $250 standard limit (4.5), and corporate card was used for expenses >$100 (4.9)."
+},
+{
+"case_id": "EXP-002",
+"employee": "Jane Doe",
+"department": "Sales",
+"request": "Submitting my individual dinner expense from my business trip to Austin yesterday. The total was $65, and I paid with my personal credit card since it was under $100. I have attached the itemized receipt, which shows a $50 food order and a $15 alcoholic beverage.",
+"reason": "To get reimbursed for a daily individual meal incurred during business travel.",
+"relevant_policy": "Expense & Reimbursement Policy",
+"relevant_sections": ["4.1", "4.6", "4.9"],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "While the total meal cost ($65) is under the $75 daily limit and using a personal card for under $100 is acceptable, section 4.6 strictly states that the purchase of alcohol is non-reimbursable for individual employee meals."
+},
+{
+"case_id": "EXP-003",
+"employee": "Michael Chang",
+"department": "Marketing",
+"request": "I am submitting a client entertainment expense from a dinner meeting held 5 days ago. The total bill was $400 for two attendees ($200 per person). I used my corporate credit card and attached the original itemized receipt. My direct manager has approved this expense report in the system.",
+"reason": "To reimburse the cost of a dinner hosted for a prospective client.",
+"relevant_policy": "Expense & Reimbursement Policy",
+"relevant_sections": ["4.1", "4.2", "4.7", "4.9"],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "The submission met the receipt (4.1), deadline (4.2), and corporate card (4.9) rules. However, because the cost exceeded $150 per attendee, section 4.7 requires pre-approval from a Department Director and the final report must list the attendees' names, titles, affiliations, and business topics discussed, all of which are missing."
+},
+{
+"case_id": "EXP-004",
+"employee": "Sarah Jenkins",
+"department": "Operations",
+"request": "I am submitting my hotel expense for a 3-night business trip I returned from last week. The total cost was $900, equating to $300 per night. I used the corporate card for the transaction and have uploaded the itemized receipt to the system.",
+"reason": "To claim reimbursement for hotel lodging during an authorized business trip.",
+"relevant_policy": "Expense & Reimbursement Policy",
+"relevant_sections": ["4.1", "4.2", "4.5", "4.9"],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "Section 4.5 specifies that standard cities have a $250/night limit, while high-cost cities have a $350/night limit. The request does not mention the destination city, so it cannot be determined if the $300 rate is compliant or violates the policy."
+},
+{
+"case_id": "EXP-005",
+"employee": "David O'Connor",
+"department": "IT Procurement",
+"request": "I need to renew the annual subscription for our department's cloud analytics software platform. The total cost for the upcoming year is $45,000. Can I get authorization to issue a purchase order to the provider?",
+"reason": "To renew a software service required for departmental operations.",
+"relevant_policy": "Expense & Reimbursement Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "This request involves renewing a corporate vendor contract and issuing a purchase order for $45,000, which falls under the Vendor Management Policy, not the Expense & Reimbursement Policy designed for individual employee travel and out-of-pocket business expenses."
+}
+]

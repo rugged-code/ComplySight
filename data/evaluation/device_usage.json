@@ -1,0 +1,69 @@
+[
+{
+"case_id": "DU-001",
+"employee": "David Chen",
+"department": "Engineering",
+"request": "I am requesting local administrator privileges for my newly assigned primary macOS workstation. I have attached my completion certificate for the 'Secure Developer Workstation' training module, as well as the documented email approval from the VP of Engineering.",
+"reason": "Needs elevated permissions to configure local containerization tools and development frameworks.",
+"relevant_policy": "Device Usage Policy",
+"relevant_sections": [
+"4.9",
+"6.1"
+],
+"expected_verdict": "COMPLIANT",
+"explanation": "While Section 4.9 restricts standard users from having local administrator rights, the employee satisfies all conditions of the exception in Section 6.1 for Software Engineers (primary workstation, completed training, and documented VP of Engineering approval)."
+},
+{
+"case_id": "DU-002",
+"employee": "Sarah Jenkins",
+"department": "Marketing",
+"request": "I have downloaded and installed a peer-to-peer (P2P) file-sharing client on my company-issued laptop to help quickly distribute large promotional video files to our external media partners.",
+"reason": "Attempting to bypass email attachment size limits for large marketing assets.",
+"relevant_policy": "Device Usage Policy",
+"relevant_sections": [
+"4.4"
+],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "Section 4.4 strictly prohibits the downloading, installation, or execution of peer-to-peer (P2P) file-sharing applications on all company-issued devices, making this action a direct violation."
+},
+{
+"case_id": "DU-003",
+"employee": "Marcus Wright",
+"department": "Sales",
+"request": "I am setting up my personal smartphone to access my corporate email and calendar while traveling. I have formally registered the device in the IT Asset Management portal just a few hours after HR approved my BYOD request. However, since this is my personal phone, I am opting out of installing the NovaTech MDM profile.",
+"reason": "Wants to access corporate data on a personal device without submitting to centralized corporate management.",
+"relevant_policy": "Device Usage Policy",
+"relevant_sections": [
+"4.1",
+"4.2"
+],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "The employee successfully complied with Section 4.1 by registering the BYOD device in the portal within 48 hours. However, they violated Section 4.2, which mandates that any mobile device synchronizing corporate email or calendars must actively install the official NovaTech MDM profile."
+},
+{
+"case_id": "DU-004",
+"employee": "Dr. Elena Rostova",
+"department": "Research & Development",
+"request": "I am requesting an exemption from the mandatory Mobile Device Management (MDM) enrollment and the 14-day OS security update requirement for three dedicated laboratory tablets. These devices are used exclusively by the R&D team for vulnerability analysis testing.",
+"reason": "Standard corporate updates and management profiles interfere with specialized diagnostic software.",
+"relevant_policy": "Device Usage Policy",
+"relevant_sections": [
+"4.2",
+"4.3",
+"6.2"
+],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "Section 6.2 allows an exemption for dedicated R&D testing devices from MDM and OS updates, but only if they are permanently isolated on an offline, air-gapped network segment. The request lacks information on whether these tablets will be network-isolated, preventing a definitive compliance decision."
+},
+{
+"case_id": "DU-005",
+"employee": "Kevin O'Connor",
+"department": "Finance",
+"request": "I am submitting my expense report for my recent trip to the London office. Attached is the itemized receipt for my hotel stay, which cost $220 USD per night before taxes.",
+"reason": "Seeking reimbursement for corporate travel accommodations.",
+"relevant_policy": "Device Usage Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "The request is regarding travel expense reimbursement and hotel cost limits, which is governed by the Expense & Reimbursement Policy, not the Device Usage Policy."
+}
+]

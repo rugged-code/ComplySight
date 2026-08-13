@@ -1,0 +1,66 @@
+[
+{
+"case_id": "AC-001",
+"employee": "Rahul Sharma",
+"department": "Engineering",
+"request": "I need database administrator access to the production SQL server. I have attached the documented approvals from my direct manager, Sarah Jenkins, and the Director of Information Security, Mark Vance. Please provision this access to my dedicated administrative account, 'rsharma-admin'.",
+"reason": "Requesting elevated system permissions for database management.",
+"relevant_policy": "Access Control Policy",
+"relevant_sections": [
+"4.4"
+],
+"expected_verdict": "COMPLIANT",
+"explanation": "The request correctly includes explicit approval from both the direct manager and the Director of Information Security, and specifies that the privileged access should be assigned to a separate, dedicated administrative account, satisfying all requirements of Section 4.4."
+},
+{
+"case_id": "AC-002",
+"employee": "Amanda Chen",
+"department": "Marketing",
+"request": "Please create a network access account for our new external marketing consultant, Jane Doe from CreativeAgency. I will serve as her internal sponsor. Set the account to expire automatically in 60 days to match the length of her initial contract.",
+"reason": "Onboarding a third-party vendor and requesting network access.",
+"relevant_policy": "Access Control Policy",
+"relevant_sections": [
+"4.8"
+],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "The request asks for a 60-day expiration date, which directly violates Section 4.8. Third-party vendor accounts must be provisioned with a hard expiration date not exceeding 30 days from creation, and any further access requires a manual extension."
+},
+{
+"case_id": "AC-003",
+"employee": "Marcus Wright",
+"department": "Sales",
+"request": "Hello IT, I am submitting this request through the ITSM portal. Please grant me standard user access to the Salesforce reporting module so I can generate my end-of-month pipeline reports.",
+"reason": "Requesting standard system access to a new application module.",
+"relevant_policy": "Access Control Policy",
+"relevant_sections": [
+"4.3"
+],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "The employee correctly submitted the standard access request through the ITSM portal as required by Section 4.3, but the request is missing the required documented approval from the requestor's direct manager."
+},
+{
+"case_id": "AC-004",
+"employee": "Priya Patel",
+"department": "IT Operations",
+"request": "I am configuring the new legacy inventory system which inherently cannot support Multi-Factor Authentication. Please create the system accounts and bypass the MFA enforcement on these logins so the application can function.",
+"reason": "Requesting an MFA exemption for a newly configured legacy application.",
+"relevant_policy": "Access Control Policy",
+"relevant_sections": [
+"4.1",
+"6.1"
+],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "While Section 6.1 allows MFA exemptions for legacy systems, there is insufficient evidence to determine compliance. The request does not specify if the system is isolated on a restricted network segment, nor does it include the formally documented exception approved by the CISO."
+},
+{
+"case_id": "AC-005",
+"employee": "David Kim",
+"department": "Finance",
+"request": "My team is planning a client dinner next week. Can you confirm the maximum allowable per-person meal limit and whether we can expense alcoholic beverages during this client entertainment event?",
+"reason": "Inquiring about expense limits and reimbursable client entertainment items.",
+"relevant_policy": "Access Control Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "This request is about expense limits and meal reimbursements, which has no meaningful applicability to the Access Control Policy governing logical system access, authentication, and credential management."
+}
+]

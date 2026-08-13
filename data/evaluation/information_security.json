@@ -1,0 +1,67 @@
+[
+{
+"case_id": "SEC-001",
+"employee": "Sarah Jenkins",
+"department": "IT Operations",
+"request": "Applying the vendor-released 'Critical' security patch for Apache to all production web servers. The patch was released yesterday at 9 AM, we tested it in staging yesterday afternoon, and are rolling it out to production today at 10 AM.",
+"reason": "Routine server maintenance",
+"relevant_policy": "Information Security Policy",
+"relevant_sections": [
+"4.7"
+],
+"expected_verdict": "COMPLIANT",
+"explanation": "Section 4.7 requires Critical patches to be tested and applied to production servers within 48 hours of release. The request demonstrates testing and deployment within approximately 25 hours, fulfilling the requirement."
+},
+{
+"case_id": "SEC-002",
+"employee": "Mark Torres",
+"department": "Marketing",
+"request": "Please temporarily disable the USB write block on my workstation. I need to copy some internal campaign assets to my personal, unencrypted thumb drive so I can work on them on my home computer over the weekend.",
+"reason": "Weekend project work",
+"relevant_policy": "Information Security Policy",
+"relevant_sections": [
+"4.5"
+],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "Section 4.5 strictly prohibits transferring company data to unencrypted removable media and mandates that USB write access remain disabled. The request directly violates these controls."
+},
+{
+"case_id": "SEC-003",
+"employee": "David Chen",
+"department": "Engineering",
+"request": "Deploying the new legacy inventory tracking module. It processes Internal data but is technically incapable of supporting TLS 1.2, so it is using TLS 1.1. We have already isolated it within a tightly restricted, internal-only network segment.",
+"reason": "Legacy application deployment",
+"relevant_policy": "Information Security Policy",
+"relevant_sections": [
+"4.3",
+"6.1"
+],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "Section 4.3 mandates TLS 1.2+ for Internal data in transit. Section 6.1 provides an exception for legacy systems using TLS 1.1 if isolated on a restricted segment AND formally approved by the CISO. While the isolation requirement is met, the CISO approval is missing, rendering it only partially compliant."
+},
+{
+"case_id": "SEC-004",
+"employee": "Aisha Patel",
+"department": "Data Science",
+"request": "We created a new dataset of user behavior analytics 10 days ago and assigned it a classification label. We are now requesting a new cloud storage bucket to house this data long-term.",
+"reason": "Storage provisioning for new dataset",
+"relevant_policy": "Information Security Policy",
+"relevant_sections": [
+"4.1",
+"4.2"
+],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "While Section 4.1's 30-day classification timeline is met, it is unknown what classification label was assigned. Without knowing if the data is Confidential or Restricted, it is impossible to determine if Section 4.2's encryption-at-rest requirement applies or is being satisfied by the new bucket."
+},
+{
+"case_id": "SEC-005",
+"employee": "Liam Murphy",
+"department": "Sales",
+"request": "Submitting my expense report for a $120 dinner with a prospective client in Chicago last Tuesday. The itemized receipt is attached to the travel portal.",
+"reason": "Client entertainment reimbursement",
+"relevant_policy": "Information Security Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "The request involves financial reimbursement for a business meal, which is entirely outside the scope of protecting information assets, encryption, patching, or any other topic covered by the Information Security Policy."
+}
+]

@@ -1,0 +1,70 @@
+[
+{
+"case_id": "IR-001",
+"employee": "Sarah Jenkins",
+"department": "Security Operations",
+"request": "I have detected active command-and-control beaconing from a standard user workstation. I immediately captured a full volatile memory (RAM) dump and a bit-for-bit forensic disk image. It has been 45 minutes since confirmation, and I am now proceeding to logically isolate the endpoint from the network.",
+"reason": "Executing standard containment protocol for a compromised endpoint.",
+"relevant_policy": "Incident Response Policy",
+"relevant_sections": [
+"4.3",
+"4.4"
+],
+"expected_verdict": "COMPLIANT",
+"explanation": "The analyst captured both the RAM dump and forensic disk image before taking further action, satisfying section 4.4. The endpoint is also being isolated well within the 2-hour window mandated by section 4.3."
+},
+{
+"case_id": "IR-002",
+"employee": "Michael Chang",
+"department": "Sales",
+"request": "I clicked on a link in an email this morning at 9:00 AM and a weird ransom message popped up. I got scared, so I did a hard reboot of my laptop. It's now 1:00 PM and it's still showing the ransom note, so I am finally reporting it to the IT Helpdesk.",
+"reason": "Reporting a suspected security incident on a corporate laptop.",
+"relevant_policy": "Incident Response Policy",
+"relevant_sections": [
+"4.1",
+"4.4"
+],
+"expected_verdict": "NON_COMPLIANT",
+"explanation": "The employee failed to report the incident within the 1-hour timeframe (reporting 4 hours later), violating section 4.1. Additionally, the employee rebooted the compromised system, which is explicitly prohibited under section 4.4 as it destroys volatile memory evidence."
+},
+{
+"case_id": "IR-003",
+"employee": "David Okafor",
+"department": "Security Operations",
+"request": "A Severity Level 1 incident has been confirmed involving a breach of customer data. As the Incident Commander, I activated the CSIRT, and the core team assembled in the virtual war room 15 minutes ago. I just sent the initial tactical briefing and meeting agenda to all members using their standard corporate email accounts.",
+"reason": "Coordinating the initial response strategy for a Severity Level 1 breach.",
+"relevant_policy": "Incident Response Policy",
+"relevant_sections": [
+"4.2",
+"4.5"
+],
+"expected_verdict": "PARTIALLY_COMPLIANT",
+"explanation": "The Incident Commander successfully activated the CSIRT and assembled them within the 30-minute requirement, complying with section 4.2. However, they violated section 4.5 by using standard corporate email to coordinate a Severity Level 1 incident, which strictly requires Out-of-Band (OOB) communication."
+},
+{
+"case_id": "IR-004",
+"employee": "Elena Rostova",
+"department": "IT Operations",
+"request": "The SOC has confirmed that Server-APP-09 is actively executing malware. The SOC Shift Lead has instructed me to unilaterally sever the server's network connection immediately to stop the spread. Do I have authorization to execute this disconnect right now?",
+"reason": "Following SOC directives to contain a compromised server.",
+"relevant_policy": "Incident Response Policy",
+"relevant_sections": [
+"4.3",
+"4.7",
+"6.1"
+],
+"expected_verdict": "INSUFFICIENT_EVIDENCE",
+"explanation": "While the SOC Shift Lead has unilateral authority to isolate endpoints (section 4.7) to meet the 2-hour containment window (section 4.3), there is missing information regarding the server's classification. If Server-APP-09 is designated as a 'Mission-Critical Production System', section 6.1 states it is exempt from unilateral isolation and requires CTO approval. Without knowing the CMDB classification, compliance cannot be determined."
+},
+{
+"case_id": "IR-005",
+"employee": "Liam O'Connor",
+"department": "Marketing",
+"request": "I am traveling to an industry conference next week and I want to know if I am allowed to expense a business-class flight since the flight duration is 8 hours. I also need to know the daily meal allowance.",
+"reason": "Booking travel and accommodation for an upcoming corporate event.",
+"relevant_policy": "Incident Response Policy",
+"relevant_sections": [],
+"expected_verdict": "IRRELEVANT",
+"explanation": "The request is regarding travel expenses, flight class restrictions, and meal allowances. This is entirely unrelated to the Incident Response Policy, which strictly governs the management and mitigation of cybersecurity incidents."
+}
+]
