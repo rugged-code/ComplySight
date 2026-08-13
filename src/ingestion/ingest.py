@@ -9,8 +9,8 @@ POLICY_DIRECTORY= Path("data/policies")
 
 def main():
 
-    embedder = JinaEmbedder
-    store = QdrantStore
+    embedder = JinaEmbedder()
+    store = QdrantStore()
 
     store.create_collection()
 

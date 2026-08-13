@@ -29,4 +29,33 @@ class QdrantStore:
             vectors_config=models.VectorParams(size=VECTOR_SIZE, distance= models.Distance.COSINE)
         )
 
+    def add_documents(self, chunks, vectors):
+
+        points = []
+
+        for index, (chunk, vector) in enumerate(zip(chunks, vectors)):
+
+            points.append(
+                models.PointStruct(
+                    id=index,
+                    vector=vector,
+                    payload={
+                        "text": chunk.text,
+                        "document": chunk.document,
+                        "source": chunk.source,
+                        "section": chunk.section,
+                        "section_title": chunk.section_title,
+                        "page_start": chunk.page_start,
+                        "page_end": chunk.page_end
+                    }
+                )
+            )
+
+        self.client.upsert(
+        collection_name=COLLECTION_NAME,
+        points=points,
+        wait=False,
+        timeout=120,
+)
+
         
