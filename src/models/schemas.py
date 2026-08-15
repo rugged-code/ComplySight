@@ -57,3 +57,27 @@ class DocumentChunk(BaseModel):
     section_title : str
     page_start : int | None = None
     page_end : int | None = None
+
+class RetrievedChunk(BaseModel):
+    text : str
+    document : str
+    source : str
+    section : str | None = None
+    section_title : str | None = None
+    page_start : int | None = None
+    page_end : int  | None = None
+
+    qdrant_score : float
+
+
+class RerankedChunk(BaseModel):
+    text : str
+    document : str
+    source : str
+    section : str | None = None
+    section_title : str | None = None
+    page_start : int | None = None
+    page_end : int  | None = None
+
+    qdrant_score : float
+    reranked_score : float
