@@ -3,9 +3,9 @@ from pydantic import BaseModel, Field
 from typing import List
 
 class Verdict(str, Enum):
-    COMPLAINT = "COMPLAINT"
-    NON_COMPLAINT = "NON_COMPLAINT"
-    PARTIALLY_COMPLAINT = "PARTIALLY_COMPLAINT"
+    COMPLIANT = "COMPLIANT"
+    NON_COMPLIANT = "NON_COMPLIANT"
+    PARTIALLY_COMPLIANT = "PARTIALLY_COMPLIANT"
     INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
 
 class ComplianceRequest(BaseModel):
@@ -17,8 +17,9 @@ class ComplianceRequest(BaseModel):
 
 class Requirement(BaseModel):
     description: str
-    section : str
-    satified: bool
+    section: str
+    applicable: bool
+    satisfied: bool
 
 class Evidence(BaseModel):
     policy: str
