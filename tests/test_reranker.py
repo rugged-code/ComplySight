@@ -14,38 +14,35 @@ and CFO.
 
 retriever = PolicyRetriever(top_k=20)
 
-results = retriever.retrieve(query)
+chunks = retriever.retrieve(query)
 
-print(f"Retrieved: {len(results)}")
-
+print(f"Retrieved: {len(chunks)}")
 
 
 reranker = JinaReranker()
 
-reranked_results = reranker.rerank(
+reranked_chunks = reranker.rerank(
     query=query,
-    results=results,
+    chunks=chunks,
     top_n=5
 )
-
 
 
 print("\nRERANKED RESULTS")
 print("=" * 60)
 
-for rank, result in enumerate(reranked_results, start=1):
 
-    payload = result["payload"]
+for rank, chunk in enumerate(reranked_chunks, start=1):
 
     print(f"\nRank: {rank}")
 
-    print("Qdrant score:", result["qdrant_score"])
-    print("Rerank score:", result["rerank_score"])
+    print("Qdrant score:", chunk.qdrant_score)
+    print("Rerank score:", chunk.rerank_score)
 
-    print("Policy:", payload.get("document"))
-    print("Section:", payload.get("section"))
-    print("Title:", payload.get("section_title"))
-    print("Source:", payload.get("source"))
+    print("Policy:", chunk.document)
+    print("Section:", chunk.section)
+    print("Title:", chunk.section_title)
+    print("Source:", chunk.source)
 
     print("\nText:")
-    print(payload.get("text"))
+    print(chunk.text)

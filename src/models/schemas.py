@@ -80,4 +80,4 @@ class RerankedChunk(BaseModel):
     page_end : int  | None = None
 
     qdrant_score : float
-    reranked_score : float
+    rerank_score : float

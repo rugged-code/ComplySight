@@ -2,7 +2,7 @@ import requests
 import os
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from src.models.schemas import RetrievedChunk, RerankedChunk
 
 
 load_dotenv()
@@ -23,15 +23,15 @@ class JinaReranker:
     def rerank(
         self,
         query: str,
-        results,
+        chunks : list[RetrievedChunk],
         top_n: int = FINAL_K
-    ):
-        if not results:
+    ) ->list[RerankedChunk]:
+        
+        if not chunks:
             return []
 
         documents = [
-            result.payload["text"]
-            for result in results
+            chunk.text for chunk in chunks
         ]
 
         payload = {
@@ -55,14 +55,21 @@ class JinaReranker:
 
         for result in data["results"]:
             original_index = result["index"]
-            score = result["relevance_score"]
+            rerank_score = result["relevance_score"]
 
-            original_result = results[original_index]
+            original_chunk = chunks[original_index]
 
-            reranked_results.append({
-                "rerank_score": score,
-                "payload": original_result.payload,
-                "qdrant_score": original_result.score,
-            })
+            reranked_chunk = RerankedChunk(
+                text=original_chunk.text,
+                document=original_chunk.document,
+                source=original_chunk.source,
+                section=original_chunk.section,
+                section_title=original_chunk.section_title,
+                page_start=original_chunk.page_start,
+                page_end=original_chunk.page_end,
+                qdrant_score=original_chunk.qdrant_score,
+                rerank_score=rerank_score
+            )
+            reranked_results.append(reranked_chunk)
 
         return reranked_results
