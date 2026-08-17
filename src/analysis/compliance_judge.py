@@ -97,6 +97,12 @@ INSUFFICIENT_EVIDENCE:
 There is not enough information to determine whether one or more
 applicable requirements are satisfied.
 
+For every policy requirement:
+- Set applicable=true if the requirement applies to the request.
+- Set applicable=false if the requirement does not apply.
+- Only evaluate satisfied when the requirement is applicable.
+- A non-applicable requirement must not be treated as a violation.
+
 EMPLOYEE REQUEST:
 
 Employee: {request.employee}

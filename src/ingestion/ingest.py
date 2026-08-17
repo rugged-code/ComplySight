@@ -36,8 +36,8 @@ def main():
 
         total_chunks += len(chunks)
 
-        print("Ingestion complete!")
-        print(f"Total chunks: {total_chunks}")
+    print("Ingestion complete!")
+    print(f"Total chunks: {total_chunks}")
 
 if __name__ == "__main__":
     main()

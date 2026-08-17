@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from qdrant_client import QdrantClient, models
+import uuid
 
 load_dotenv()
 
@@ -33,11 +34,11 @@ class QdrantStore:
 
         points = []
 
-        for index, (chunk, vector) in enumerate(zip(chunks, vectors)):
+        for chunk, vector in zip(chunks, vectors):
 
             points.append(
                 models.PointStruct(
-                    id=index,
+                    id=str(uuid.uuid4()),
                     vector=vector,
                     payload={
                         "text": chunk.text,
@@ -54,7 +55,7 @@ class QdrantStore:
         self.client.upsert(
         collection_name=COLLECTION_NAME,
         points=points,
-        wait=False,
+        wait=True,
         timeout=120,
 )
 

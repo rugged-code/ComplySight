@@ -6,7 +6,7 @@ from src.models.schemas import RetrievedChunk, RerankedChunk
 
 
 load_dotenv()
-JINA_RERANKER_MODEL = "jina-reranker-v3"
+JINA_RERANKER_MODEL = "jina-reranker-v2-base-multilingual"
 FINAL_K = 5
 
 class JinaReranker:
@@ -17,7 +17,7 @@ class JinaReranker:
         if not self.api_key:
             raise ValueError("JINA_API_KEY not found in .env")
 
-        self.model = "jina-reranker-v3"
+        self.model = JINA_RERANKER_MODEL
         self.url = "https://api.jina.ai/v1/rerank"
 
     def rerank(
