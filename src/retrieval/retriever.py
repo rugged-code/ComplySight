@@ -17,7 +17,8 @@ class PolicyRetriever:
             collection_name = "policylens_policies",
             query=query_vector, 
             limit = self.top_k,
-            with_payload=True
+            with_payload=True,
+            timeout=120
         )
 
         retrieved_chunks = []

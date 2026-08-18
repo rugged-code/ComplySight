@@ -7,6 +7,7 @@ class Verdict(str, Enum):
     NON_COMPLIANT = "NON_COMPLIANT"
     PARTIALLY_COMPLIANT = "PARTIALLY_COMPLIANT"
     INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
+    IRRELEVANT = "IRRELEVANT"
 
 class ComplianceRequest(BaseModel):
     employee : str
@@ -15,11 +16,17 @@ class ComplianceRequest(BaseModel):
     reason : str
     additional_information : str = ""
 
+class RequirementStatus(str, Enum):
+    SATISFIED = "SATISFIED"
+    NOT_SATISFIED = "NOT_SATISFIED"
+    INSUFFICIENT_EVIDENCE = "INSUFFICIENT_EVIDENCE"
+    NON_APPLICABLE = "NON_APPLICABLE"
+
+
 class Requirement(BaseModel):
     description: str
     section: str
-    applicable: bool
-    satisfied: bool
+    status: RequirementStatus
 
 class Evidence(BaseModel):
     policy: str

@@ -1,0 +1,6802 @@
+[
+  {
+    "case_id": "AC-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "rerank_score": 0.49569711
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.34687307
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "rerank_score": 0.26740819
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "rerank_score": 0.256832
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "rerank_score": 0.19806418
+      }
+    ]
+  },
+  {
+    "case_id": "AC-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "PARTIALLY_COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.7",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.25091279
+      },
+      {
+        "document": "Vendor Management",
+        "section": "2",
+        "rerank_score": 0.21206883
+      },
+      {
+        "document": "Vendor Management",
+        "section": "1",
+        "rerank_score": 0.20181322
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "rerank_score": 0.17895588
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.9",
+        "rerank_score": 0.16559312
+      }
+    ]
+  },
+  {
+    "case_id": "AC-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": null,
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Password Authentication Policy",
+        "section": null,
+        "rerank_score": 0.29017562
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.277473
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "rerank_score": 0.27512974
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "rerank_score": 0.15405758
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.3",
+        "rerank_score": 0.12506537
+      }
+    ]
+  },
+  {
+    "case_id": "AC-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "6.1",
+        "rerank_score": 0.51324153
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "rerank_score": 0.45495641
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.43638182
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "5",
+        "rerank_score": 0.39887464
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.1",
+        "rerank_score": 0.38954657
+      }
+    ]
+  },
+  {
+    "case_id": "AC-005",
+    "expected": "IRRELEVANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "rerank_score": 0.4073334
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.35577488
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "rerank_score": 0.2782568
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "rerank_score": 0.25832596
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "rerank_score": 0.19314736
+      }
+    ]
+  },
+  {
+    "case_id": "DP-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "8",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "rerank_score": 0.48267296
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "rerank_score": 0.39420095
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "rerank_score": 0.32509187
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "rerank_score": 0.32338011
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "6.2",
+        "rerank_score": 0.30985841
+      }
+    ]
+  },
+  {
+    "case_id": "DP-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Data Protection Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Data Protection Policy",
+        "section": "4.7",
+        "rerank_score": 0.1943678
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "rerank_score": 0.1943678
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.18010667
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "rerank_score": 0.16344544
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "5",
+        "rerank_score": 0.12940273
+      }
+    ]
+  },
+  {
+    "case_id": "DP-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.7",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "rerank_score": 0.38676342
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "rerank_score": 0.37296188
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.30652705
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "rerank_score": 0.25091279
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "rerank_score": 0.22678363
+      }
+    ]
+  },
+  {
+    "case_id": "DP-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "IRRELEVANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": null,
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": null,
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "rerank_score": 0.33111975
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": null,
+        "rerank_score": 0.23934932
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": null,
+        "rerank_score": 0.23792988
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.22270013
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.9",
+        "rerank_score": 0.20689406
+      }
+    ]
+  },
+  {
+    "case_id": "DP-005",
+    "expected": "IRRELEVANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.10",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "rerank_score": 0.19930799
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "rerank_score": 0.10521054
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "rerank_score": 0.10230471
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.08151976
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "rerank_score": 0.07807817
+      }
+    ]
+  },
+  {
+    "case_id": "DU-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.7",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "rerank_score": 0.46879062
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.9",
+        "rerank_score": 0.34422299
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.24944726
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "rerank_score": 0.16776334
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "3",
+        "rerank_score": 0.1592174
+      }
+    ]
+  },
+  {
+    "case_id": "DU-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "4.4",
+        "rerank_score": 0.46004632
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.4",
+        "rerank_score": 0.44191381
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "rerank_score": 0.36568317
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.10",
+        "rerank_score": 0.34953272
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "rerank_score": 0.22135067
+      }
+    ]
+  },
+  {
+    "case_id": "DU-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.6",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "rerank_score": 0.51287556
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "2",
+        "rerank_score": 0.46441576
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "rerank_score": 0.44143218
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "1",
+        "rerank_score": 0.4291901
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "rerank_score": 0.42250463
+      }
+    ]
+  },
+  {
+    "case_id": "DU-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "rerank_score": 0.63973606
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.2",
+        "rerank_score": 0.35936412
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.3",
+        "rerank_score": 0.31320965
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "rerank_score": 0.27590945
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "5",
+        "rerank_score": 0.27357441
+      }
+    ]
+  },
+  {
+    "case_id": "DU-005",
+    "expected": "IRRELEVANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "rerank_score": 0.33458945
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.2991052
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "rerank_score": 0.16132024
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "rerank_score": 0.15817434
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "rerank_score": 0.14128141
+      }
+    ]
+  },
+  {
+    "case_id": "EC-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.1",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.2",
+        "rerank_score": 0.47244006
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "5",
+        "rerank_score": 0.35131106
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "rerank_score": 0.34687307
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "7",
+        "rerank_score": 0.22953522
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "rerank_score": 0.17217185
+      }
+    ]
+  },
+  {
+    "case_id": "EC-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.9",
+        "rerank_score": 0.38075897
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "rerank_score": 0.21733753
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "5",
+        "rerank_score": 0.18359363
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.10",
+        "rerank_score": 0.14414886
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "rerank_score": 0.13117322
+      }
+    ]
+  },
+  {
+    "case_id": "EC-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.1",
+        "rerank_score": 0.43830431
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "rerank_score": 0.35756752
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "5",
+        "rerank_score": 0.3106944
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.2",
+        "rerank_score": 0.19930799
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "rerank_score": 0.18359363
+      }
+    ]
+  },
+  {
+    "case_id": "EC-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "8",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "4.5",
+        "rerank_score": 0.29421496
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "rerank_score": 0.18242553
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.16885695
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "rerank_score": 0.12168574
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "rerank_score": 0.10970578
+      }
+    ]
+  },
+  {
+    "case_id": "EC-005",
+    "expected": "IRRELEVANT",
+    "actual": "IRRELEVANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.5",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.35667071
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "rerank_score": 0.25386101
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "rerank_score": 0.24077459
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "rerank_score": 0.16451646
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "5",
+        "rerank_score": 0.15203226
+      }
+    ]
+  },
+  {
+    "case_id": "EXP-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "7",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "rerank_score": 0.42107561
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.4",
+        "rerank_score": 0.37022537
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "rerank_score": 0.33807713
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "rerank_score": 0.29583988
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "rerank_score": 0.29583988
+      }
+    ]
+  },
+  {
+    "case_id": "EXP-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "PARTIALLY_COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "rerank_score": 0.4263216
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "rerank_score": 0.32423541
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "rerank_score": 0.25238404
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "rerank_score": 0.21469143
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "rerank_score": 0.19193278
+      }
+    ]
+  },
+  {
+    "case_id": "EXP-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "rerank_score": 0.39233679
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "rerank_score": 0.31405056
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "rerank_score": 0.30321571
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.284576
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "rerank_score": 0.24798745
+      }
+    ]
+  },
+  {
+    "case_id": "EXP-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "NON_COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "rerank_score": 0.41964793
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "rerank_score": 0.29992473
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "rerank_score": 0.26740819
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.23510839
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "rerank_score": 0.22541659
+      }
+    ]
+  },
+  {
+    "case_id": "EXP-005",
+    "expected": "IRRELEVANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "rerank_score": 0.29992473
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.29665425
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "rerank_score": 0.26588047
+      },
+      {
+        "document": "Vendor Management",
+        "section": "5",
+        "rerank_score": 0.20817892
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "rerank_score": 0.14033625
+      }
+    ]
+  },
+  {
+    "case_id": "IR-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "1",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Incident Response Policy",
+        "section": "4.4",
+        "rerank_score": 0.58082765
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "rerank_score": 0.56553864
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "rerank_score": 0.46392995
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "5",
+        "rerank_score": 0.42202815
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.39653543
+      }
+    ]
+  },
+  {
+    "case_id": "IR-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "PARTIALLY_COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Incident Response Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.5",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "4.7",
+        "rerank_score": 0.45471433
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "rerank_score": 0.45398796
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.5",
+        "rerank_score": 0.42966866
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.1",
+        "rerank_score": 0.42393497
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.4",
+        "rerank_score": 0.40922078
+      }
+    ]
+  },
+  {
+    "case_id": "IR-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.7",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Incident Response Policy",
+        "section": "5",
+        "rerank_score": 0.5607338
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.2",
+        "rerank_score": 0.53922588
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "8",
+        "rerank_score": 0.52974999
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "rerank_score": 0.51915568
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.8",
+        "rerank_score": 0.49182203
+      }
+    ]
+  },
+  {
+    "case_id": "IR-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Incident Response Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.3",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "rerank_score": 0.60252941
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.7",
+        "rerank_score": 0.49835202
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.5",
+        "rerank_score": 0.39420095
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.38306415
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "rerank_score": 0.37113661
+      }
+    ]
+  },
+  {
+    "case_id": "IR-005",
+    "expected": "IRRELEVANT",
+    "actual": "COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "rerank_score": 0.44794324
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "rerank_score": 0.30321571
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.4",
+        "rerank_score": 0.30321571
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "rerank_score": 0.25386101
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "rerank_score": 0.1066906
+      }
+    ]
+  },
+  {
+    "case_id": "SEC-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Information Security Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.40591964
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.7",
+        "rerank_score": 0.39700291
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "5",
+        "rerank_score": 0.33198547
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "rerank_score": 0.31489262
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "5",
+        "rerank_score": 0.30569732
+      }
+    ]
+  },
+  {
+    "case_id": "SEC-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Information Security Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Information Security Policy",
+        "section": "4.5",
+        "rerank_score": 0.41158381
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "rerank_score": 0.284576
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.25238404
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.10",
+        "rerank_score": 0.20817892
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.2",
+        "rerank_score": 0.18359363
+      }
+    ]
+  },
+  {
+    "case_id": "SEC-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Information Security Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Information Security Policy",
+        "section": "6.1",
+        "rerank_score": 0.44770172
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "rerank_score": 0.29421496
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.3",
+        "rerank_score": 0.27512974
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.1",
+        "rerank_score": 0.23651622
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.2",
+        "rerank_score": 0.20055769
+      }
+    ]
+  },
+  {
+    "case_id": "SEC-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Information Security Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.8",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Information Security Policy",
+        "section": "4.1",
+        "rerank_score": 0.47584885
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "3",
+        "rerank_score": 0.25091279
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "rerank_score": 0.23934932
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "rerank_score": 0.16238002
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "8",
+        "rerank_score": 0.15713684
+      }
+    ]
+  },
+  {
+    "case_id": "SEC-005",
+    "expected": "IRRELEVANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.8",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "rerank_score": 0.33458945
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.3",
+        "rerank_score": 0.14903529
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.13028541
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "rerank_score": 0.12506537
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "rerank_score": 0.12002562
+      }
+    ]
+  },
+  {
+    "case_id": "AUTH-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": null,
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": null,
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": null,
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.10",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "rerank_score": 0.46150213
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.2",
+        "rerank_score": 0.41727152
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.8",
+        "rerank_score": 0.41300356
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": null,
+        "rerank_score": 0.3407045
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": null,
+        "rerank_score": 0.26588047
+      }
+    ]
+  },
+  {
+    "case_id": "AUTH-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Password Authentication Policy",
+        "section": "5",
+        "rerank_score": 0.29583988
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.3",
+        "rerank_score": 0.27435136
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.9",
+        "rerank_score": 0.25091279
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.24220563
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.2",
+        "rerank_score": 0.23510839
+      }
+    ]
+  },
+  {
+    "case_id": "AUTH-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "rerank_score": 0.46198753
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "rerank_score": 0.41253012
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "5",
+        "rerank_score": 0.22541659
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "rerank_score": 0.18594719
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "rerank_score": 0.17441027
+      }
+    ]
+  },
+  {
+    "case_id": "AUTH-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "rerank_score": 0.38908219
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.3",
+        "rerank_score": 0.32594952
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.2",
+        "rerank_score": 0.2925953
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "4.1",
+        "rerank_score": 0.28696784
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "rerank_score": 0.284576
+      }
+    ]
+  },
+  {
+    "case_id": "AUTH-005",
+    "expected": "IRRELEVANT",
+    "actual": "IRRELEVANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.34775856
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "rerank_score": 0.09807932
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "rerank_score": 0.08389039
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "8",
+        "rerank_score": 0.08269734
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "rerank_score": 0.07477004
+      }
+    ]
+  },
+  {
+    "case_id": "RW-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "rerank_score": 0.52597755
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "rerank_score": 0.50927627
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "2",
+        "rerank_score": 0.49977204
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "rerank_score": 0.49900818
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "rerank_score": 0.47377896
+      }
+    ]
+  },
+  {
+    "case_id": "RW-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.1",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "rerank_score": 0.42393497
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "rerank_score": 0.40215731
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "rerank_score": 0.37570643
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "rerank_score": 0.33633107
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "rerank_score": 0.31489262
+      }
+    ]
+  },
+  {
+    "case_id": "RW-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "NON_COMPLIANT",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "4.3",
+        "rerank_score": 0.47450942
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "rerank_score": 0.46125942
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "rerank_score": 0.41964793
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "rerank_score": 0.41774645
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.5",
+        "rerank_score": 0.41679665
+      }
+    ]
+  },
+  {
+    "case_id": "RW-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "6.3",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Device Usage Policy",
+        "section": "2",
+        "rerank_score": 0.51696128
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "2",
+        "rerank_score": 0.47256175
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "2",
+        "rerank_score": 0.43398145
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.7",
+        "rerank_score": 0.43062615
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "2",
+        "rerank_score": 0.42584395
+      }
+    ]
+  },
+  {
+    "case_id": "RW-005",
+    "expected": "IRRELEVANT",
+    "actual": "IRRELEVANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.6",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Remote Work Policy",
+        "section": "4.2",
+        "rerank_score": 0.18952109
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "rerank_score": 0.17106119
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "rerank_score": 0.1431877
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "rerank_score": 0.12765263
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "rerank_score": 0.12252322
+      }
+    ]
+  },
+  {
+    "case_id": "VND-001",
+    "expected": "COMPLIANT",
+    "actual": "COMPLIANT",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": null,
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.6",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "rerank_score": 0.51549798
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "rerank_score": 0.49600229
+      },
+      {
+        "document": "Vendor Management",
+        "section": "3",
+        "rerank_score": 0.34598863
+      },
+      {
+        "document": "Vendor Management",
+        "section": null,
+        "rerank_score": 0.30902371
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.2",
+        "rerank_score": 0.30404165
+      }
+    ]
+  },
+  {
+    "case_id": "VND-002",
+    "expected": "NON_COMPLIANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.4",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.2",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "rerank_score": 0.42488921
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "rerank_score": 0.29340446
+      },
+      {
+        "document": "Vendor Management",
+        "section": "5",
+        "rerank_score": 0.24364243
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "rerank_score": 0.17895588
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.2",
+        "rerank_score": 0.17667159
+      }
+    ]
+  },
+  {
+    "case_id": "VND-003",
+    "expected": "PARTIALLY_COMPLIANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Information Security Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Password Authentication Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.10",
+        "score": null
+      },
+      {
+        "document": "Incident Response Policy",
+        "section": "6.1",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Access Control Policy",
+        "section": "4.5",
+        "rerank_score": 0.54504359
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.8",
+        "rerank_score": 0.47560534
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.10",
+        "rerank_score": 0.3738758
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.3",
+        "rerank_score": 0.29992473
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "5",
+        "rerank_score": 0.27048022
+      }
+    ]
+  },
+  {
+    "case_id": "VND-004",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": true,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.5",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Access Control Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": null,
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Device Usage Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "5",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Vendor Management",
+        "section": "4.3",
+        "rerank_score": 0.25982562
+      },
+      {
+        "document": "Vendor Management",
+        "section": "4.1",
+        "rerank_score": 0.15713684
+      },
+      {
+        "document": "Vendor Management",
+        "section": null,
+        "rerank_score": 0.14608724
+      },
+      {
+        "document": "Vendor Management",
+        "section": "5",
+        "rerank_score": 0.11920292
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "rerank_score": 0.09947021
+      }
+    ]
+  },
+  {
+    "case_id": "VND-005",
+    "expected": "IRRELEVANT",
+    "actual": "INSUFFICIENT_EVIDENCE",
+    "passed": false,
+    "status": "COMPLETED",
+    "retrieved_sections": [
+      {
+        "document": "Employee Conduct Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.6",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Employee Conduct Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Vendor Management",
+        "section": "6.2",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.1",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.8",
+        "score": null
+      },
+      {
+        "document": "Remote Work Policy",
+        "section": "4.9",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "6.3",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "7",
+        "score": null
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "2",
+        "score": null
+      },
+      {
+        "document": "Data Protection Policy",
+        "section": "4.8",
+        "score": null
+      }
+    ],
+    "reranked_sections": [
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "3",
+        "rerank_score": 0.27669051
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.1",
+        "rerank_score": 0.24077459
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "5",
+        "rerank_score": 0.16995624
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "7",
+        "rerank_score": 0.13660839
+      },
+      {
+        "document": "Expense Reimbursement Policy",
+        "section": "4.2",
+        "rerank_score": 0.13117322
+      }
+    ]
+  }
+]

@@ -19,7 +19,7 @@ class QdrantStore:
         if not api_key:
             raise ValueError("QDRANT api key not found")
 
-        self.client = QdrantClient(url=url, api_key=api_key)
+        self.client = QdrantClient(url=url, api_key=api_key,timeout=120)
 
     def create_collection(self):
         if self.client.collection_exists(COLLECTION_NAME):
