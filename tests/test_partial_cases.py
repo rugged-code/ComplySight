@@ -1,5 +1,6 @@
 import json
 import time
+from pathlib import Path
 
 from src.models.schemas import ComplianceRequest
 from src.retrieval.retriever import PolicyRetriever
@@ -8,170 +9,93 @@ from src.retrieval.query_builder import build_retrieval_query
 from src.analysis.compliance_judge import ComplianceJudge
 
 
-PARTIAL_CASES = {
-    "AC-003",
-    "DP-003",
-    "DU-003",
-    "EC-003",
-    "EXP-003",
-    "IR-003",
-    "SEC-003",
+FAILED_CASES = {
+    # NON_COMPLIANT that became PARTIAL
+    "AC-002",
+    "DP-002",
+    "EXP-002",
+    "AUTH-002",
+    "RW-002",
+    "VND-002",
+
+    # PARTIAL that became COMPLIANT
     "AUTH-003",
-    "RW-003",
-    "VND-003",
 }
 
 
-def load_partial_cases():
-
+def load_failed_cases():
     cases = []
-
-    for file_path in sorted(
-        __import__("pathlib").Path("data/evaluation").glob("*.json")
-    ):
-
+    for file_path in sorted(Path("data/evaluation").glob("*.json")):
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-
         if isinstance(data, list):
             cases.extend(data)
         else:
             cases.append(data)
 
-    return [
-        case
-        for case in cases
-        if case["case_id"] in PARTIAL_CASES
-    ]
+    return [c for c in cases if c["case_id"] in FAILED_CASES]
 
 
 def main():
+    cases = load_failed_cases()
+    print(f"Running {len(cases)} previously failed cases\n")
 
-    cases = load_partial_cases()
-
-    print(f"Total partial cases: {len(cases)}")
-
-    retriever = PolicyRetriever(top_k=20)
+    retriever = PolicyRetriever(top_k=30)
     reranker = JinaReranker()
     judge = ComplianceJudge()
 
     passed = 0
     failed = 0
+    results = []
 
     for i, case in enumerate(cases):
-
-        print("\n" + "=" * 70)
-        print(f"Testing: {case['case_id']}")
-        print(f"Expected: {case['expected_verdict']}")
+        case_id = case["case_id"]
+        expected = case["expected_verdict"]
 
         request = ComplianceRequest(
             employee=case["employee"],
             department=case["department"],
             request=case["request"],
             reason=case["reason"],
-            additional_information=case.get(
-                "additional_information",
-                ""
-            )
+            additional_information=case.get("additional_information", ""),
         )
 
-        # 1. Build retrieval query
         query = build_retrieval_query(request)
-
-        # 2. Qdrant retrieval
         retrieved = retriever.retrieve(query)
-
-        print(f"Retrieved: {len(retrieved)}")
-
-        print("\nRetrieved sections:")
-
-        for chunk in retrieved:
-            print(
-                f"  {chunk.document} | "
-                f"Section: {chunk.section}"
-            )
-
-        # 3. Reranking
-        reranked = reranker.rerank(
-            query=query,
-            chunks=retrieved,
-            top_n=5
-        )
-
-        print(f"\nReranked: {len(reranked)}")
-
-        print("\nReranked sections:")
-
-        for chunk in reranked:
-            print(
-                f"  {chunk.document} | "
-                f"Section: {chunk.section} | "
-                f"Score: {chunk.rerank_score}"
-            )
-
-        # 4. Gemini judgment
-        judgment = judge.analyze(
-            request=request,
-            evidence=reranked
-        )
+        reranked = reranker.rerank(query=query, chunks=retrieved, top_n=8)
+        judgment = judge.analyze(request=request, evidence=reranked)
 
         actual = judgment.verdict.value
-        expected = case["expected_verdict"]
+        ok = actual == expected
 
-        passed_case = actual == expected
-
-        if passed_case:
+        if ok:
             passed += 1
+            status = "PASS"
         else:
             failed += 1
+            status = "FAIL"
 
-        print("\n" + "-" * 70)
-        print(f"Expected: {expected}")
-        print(f"Actual:   {actual}")
-        print(f"Passed:   {passed_case}")
+        print(f"{case_id:12} | Expected: {expected:22} | Actual: {actual:22} | {status}")
 
-        # Show requirement-level result
-        print("\nRequirements:")
+        results.append({
+            "case_id": case_id,
+            "expected": expected,
+            "actual": actual,
+            "passed": ok,
+        })
 
-        for requirement in judgment.requirements:
-
-            if hasattr(requirement, "status"):
-                status = requirement.status.value
-            elif hasattr(requirement, "satified"):
-                status = requirement.satified
-            else:
-                status = "N/A"
-
-            print(
-                f"  Section {requirement.section}: "
-                f"{status}"
-            )
-
-            print(
-                f"    {requirement.description}"
-            )
-
-        print("\nExplanation:")
-        print(judgment.explanation)
-
-        # Wait before next Gemini call
         if i < len(cases) - 1:
-            print("\nWaiting 6 seconds...")
-            time.sleep(6)
+            time.sleep(4)
 
-    print("\n" + "=" * 70)
-    print("PARTIAL COMPLIANCE RESULTS")
-    print("=" * 70)
+    print("\n" + "=" * 60)
+    print(f"Total: {len(cases)}  |  Passed: {passed}  |  Failed: {failed}")
+    print(f"Accuracy: {passed / len(cases):.1%}")
+    print("=" * 60)
 
-    print(f"Total:  {len(cases)}")
-    print(f"Passed: {passed}")
-    print(f"Failed: {failed}")
-
-    if cases:
-        print(
-            f"Accuracy: "
-            f"{passed / len(cases):.2%}"
-        )
+    print("\nStill failing:")
+    for r in results:
+        if not r["passed"]:
+            print(f"  {r['case_id']}: {r['expected']} -> {r['actual']}")
 
 
 if __name__ == "__main__":

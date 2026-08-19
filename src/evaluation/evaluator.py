@@ -47,7 +47,7 @@ class PolicyLensEvaluator:
         reranked_chunks = self.reranker.rerank(
             query=retrieval_query,
             chunks = retrieved_chunks,
-            top_n=5,
+            top_n=8,
         )
 
         judgement = self.judge.analyze(
@@ -65,9 +65,22 @@ class PolicyLensEvaluator:
             "expected_verdict": expected_verdict,
             "actual_verdict": actual_verdict,
             "passed": passed,
-            "judgment": judgement,
-            "retrieved_chunks": retrieved_chunks,
-            "reranked_chunks": reranked_chunks,
+            "relevance": judgement.relevance.model_dump(),
+            "requirements": [
+                requirement.model_dump()
+                for requirement in judgement.requirements
+            ],
+            "violations": judgement.violations,
+            "missing_evidence": judgement.missing_evidence,
+            "explanation": judgement.explanation,
+            "retrieved_chunks": [
+                chunk.model_dump()
+                for chunk in retrieved_chunks
+            ],
+            "reranked_chunks": [
+                chunk.model_dump()
+                for chunk in reranked_chunks
+            ],
         }
 
 

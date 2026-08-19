@@ -85,7 +85,7 @@ def run_case(case, retriever, reranker, judge):
 
     try:
         reranked = with_retry(
-            lambda: reranker.rerank(query=query, chunks=retrieved, top_n=5),
+            lambda: reranker.rerank(query=query, chunks=retrieved, top_n=8),
             retryable=is_server_error,
             label="Jina rerank",
         )
@@ -120,13 +120,34 @@ def run_case(case, retriever, reranker, judge):
         "passed": passed_case,
         "status": "COMPLETED",
         "retrieved_sections": [
-            {"document": c.document, "section": c.section, "score": getattr(c, "score", None)}
-            for c in retrieved
+            {
+                "document": chunk.document,
+                "section": chunk.section,
+                "qdrant_score": chunk.qdrant_score,
+            }
+            for chunk in retrieved
         ],
         "reranked_sections": [
-            {"document": c.document, "section": c.section, "rerank_score": c.rerank_score}
-            for c in reranked
+            {
+                "document": chunk.document,
+                "section": chunk.section,
+                "qdrant_score": chunk.qdrant_score,
+                "rerank_score": chunk.rerank_score,
+            }
+            for chunk in reranked
         ],
+        "relevance": judgment.relevance.model_dump(),
+        "requirements": [
+            requirement.model_dump()
+            for requirement in judgment.requirements
+        ],
+        "violations": judgment.violations,
+        "missing_evidence": judgment.missing_evidence,
+        "evidence": [
+            evidence_item.model_dump()
+            for evidence_item in judgment.evidence
+        ],
+        "explanation": judgment.explanation,
     }
 
 
@@ -134,7 +155,7 @@ def main():
     cases = load_test_cases()
     print(f"Total test cases: {len(cases)}")
 
-    retriever = PolicyRetriever(top_k=20)
+    retriever = PolicyRetriever(top_k=30)
     reranker = JinaReranker()
     judge = ComplianceJudge()
 

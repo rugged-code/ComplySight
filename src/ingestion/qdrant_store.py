@@ -30,6 +30,23 @@ class QdrantStore:
             vectors_config=models.VectorParams(size=VECTOR_SIZE, distance= models.Distance.COSINE)
         )
 
+    def get_chunks_by_document(self, document_name: str):
+        points, _ = self.client.scroll(
+            collection_name=COLLECTION_NAME,
+            scroll_filter=models.Filter(
+                must=[
+                    models.FieldCondition(
+                        key="document",
+                        match=models.MatchValue(value=document_name),
+                    )
+                ]
+            ),
+            limit=200,
+            with_payload=True,
+            with_vectors=False,
+        )
+        return points
+
     def add_documents(self, chunks, vectors):
 
         points = []

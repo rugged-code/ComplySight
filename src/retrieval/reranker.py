@@ -1,16 +1,18 @@
-import requests
 import os
 
+import requests
 from dotenv import load_dotenv
+
 from src.models.schemas import RetrievedChunk, RerankedChunk
 
 
 load_dotenv()
+
 JINA_RERANKER_MODEL = "jina-reranker-v2-base-multilingual"
-FINAL_K = 5
+JINA_RERANK_URL = "https://api.jina.ai/v1/rerank"
+
 
 class JinaReranker:
-
     def __init__(self):
         self.api_key = os.getenv("JINA_API_KEY")
 
@@ -18,58 +20,66 @@ class JinaReranker:
             raise ValueError("JINA_API_KEY not found in .env")
 
         self.model = JINA_RERANKER_MODEL
-        self.url = "https://api.jina.ai/v1/rerank"
+        self.url = JINA_RERANK_URL
 
     def rerank(
         self,
         query: str,
-        chunks : list[RetrievedChunk],
-        top_n: int = FINAL_K
-    ) ->list[RerankedChunk]:
-        
+        chunks: list[RetrievedChunk],
+        top_n: int = 8,
+    ) -> list[RerankedChunk]:
         if not chunks:
             return []
 
-        documents = [
-            chunk.text for chunk in chunks
-        ]
-
         payload = {
-            "model": JINA_RERANKER_MODEL,
-            "query" : query,
-            "documents": documents,
-            "top_n": top_n,
-            "return_documents": False
+            "model": self.model,
+            "query": query,
+            "documents": [chunk.text for chunk in chunks],
+            "top_n": min(top_n, len(chunks)),
         }
+
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+
         response = requests.post(
             self.url,
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json"
-            },
-            json=payload
+            headers=headers,
+            json=payload,
+            timeout=60,
         )
         response.raise_for_status()
+
         data = response.json()
-        reranked_results=[]
+        results = data.get("results", [])
 
-        for result in data["results"]:
-            original_index = result["index"]
-            rerank_score = result["relevance_score"]
+        reranked_chunks: list[RerankedChunk] = []
 
-            original_chunk = chunks[original_index]
+        for result in results:
+            index = result["index"]
 
-            reranked_chunk = RerankedChunk(
-                text=original_chunk.text,
-                document=original_chunk.document,
-                source=original_chunk.source,
-                section=original_chunk.section,
-                section_title=original_chunk.section_title,
-                page_start=original_chunk.page_start,
-                page_end=original_chunk.page_end,
-                qdrant_score=original_chunk.qdrant_score,
-                rerank_score=rerank_score
+            if index < 0 or index >= len(chunks):
+                raise ValueError(
+                    f"Jina returned invalid result index {index} "
+                    f"for {len(chunks)} chunks"
+                )
+
+            original_chunk = chunks[index]
+
+            reranked_chunks.append(
+                RerankedChunk(
+                    text=original_chunk.text,
+                    document=original_chunk.document,
+                    source=original_chunk.source,
+                    section=original_chunk.section,
+                    section_title=original_chunk.section_title,
+                    page_start=original_chunk.page_start,
+                    page_end=original_chunk.page_end,
+                    qdrant_score=original_chunk.qdrant_score,
+                    rerank_score=float(result["relevance_score"]),
+                )
             )
-            reranked_results.append(reranked_chunk)
 
-        return reranked_results
+        return reranked_chunks

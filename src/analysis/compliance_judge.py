@@ -1,55 +1,299 @@
 import os
+
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-from src.models.schemas import (ComplianceRequest, RerankedChunk, Judgment)
+from src.models.schemas import (
+    AnalysisResult,
+    ComplianceRequest,
+    Evidence,
+    Judgment,
+    RelevanceDecision,
+    Requirement,
+    RequirementStatus,
+    RerankedChunk,
+    Verdict,
+)
+
 
 load_dotenv()
 
 
-class ComplianceJudge:
+def compute_verdict(
+    is_relevant: bool,
+    requirements: list[Requirement],
+) -> Verdict:
+    """
+    Deterministic verdict calculation.
 
+    Gemini evaluates obligations. Python determines the final verdict.
+    """
+
+    if not is_relevant:
+        return Verdict.IRRELEVANT
+
+    # Relevant policy exists, but no assessable policy obligation was found.
+    # This is lack of usable evidence, not an irrelevant request.
+    if not requirements:
+        return Verdict.INSUFFICIENT_EVIDENCE
+
+    statuses = {requirement.status for requirement in requirements}
+
+    has_satisfied = RequirementStatus.SATISFIED in statuses
+    has_not_satisfied = RequirementStatus.NOT_SATISFIED in statuses
+    has_insufficient = (
+        RequirementStatus.INSUFFICIENT_EVIDENCE in statuses
+    )
+
+    # This only represents genuinely independent obligations.
+    if has_satisfied and has_not_satisfied:
+        return Verdict.PARTIALLY_COMPLIANT
+
+    # Preserve the test-set semantics from your existing decision tree:
+    # uncertainty prevents a definitive COMPLIANT or NON_COMPLIANT result.
+    if has_insufficient:
+        return Verdict.INSUFFICIENT_EVIDENCE
+
+    if statuses == {RequirementStatus.SATISFIED}:
+        return Verdict.COMPLIANT
+
+    if statuses == {RequirementStatus.NOT_SATISFIED}:
+        return Verdict.NON_COMPLIANT
+
+    return Verdict.INSUFFICIENT_EVIDENCE
+
+
+class ComplianceJudge:
     def __init__(self):
         api_key = os.getenv("GOOGLE_API_KEY")
 
         if not api_key:
-            raise ValueError("GOOGLE API KEY not found")
+            raise ValueError("GOOGLE_API_KEY not found in .env")
 
         self.client = genai.Client(api_key=api_key)
         self.model = os.getenv("GEMINI_MODEL")
 
+        if not self.model:
+            raise ValueError("GEMINI_MODEL not found in .env")
+
     def analyze(
         self,
         request: ComplianceRequest,
-        evidence: list[RerankedChunk]
+        evidence: list[RerankedChunk],
     ) -> Judgment:
+        evidence_text, valid_evidence_ids = self._format_evidence(evidence)
 
-        prompt = self._build_prompt(request, evidence)
+        relevance = self._classify_relevance(
+            request=request,
+            evidence_text=evidence_text,
+        )
+
+        # Do not allow a relevance claim without a citation to supplied text.
+        relevance.governing_evidence_ids = [
+            evidence_id
+            for evidence_id in relevance.governing_evidence_ids
+            if evidence_id in valid_evidence_ids
+        ]
+
+        if relevance.is_relevant and not relevance.governing_evidence_ids:
+            relevance = RelevanceDecision(
+                is_relevant=False,
+                governing_evidence_ids=[],
+                rationale=(
+                    "The relevance classifier did not cite a supplied policy "
+                    "section that governs this request."
+                ),
+            )
+
+        if not relevance.is_relevant:
+            return Judgment(
+                verdict=Verdict.IRRELEVANT,
+                relevance=relevance,
+                requirements=[],
+                violations=[],
+                missing_evidence=[],
+                evidence=[],
+                explanation=relevance.rationale,
+            )
+
+        analysis = self._analyze_requirements(
+            request=request,
+            evidence_text=evidence_text,
+        )
+
+        # Keep only valid evidence citations.
+        for requirement in analysis.requirements:
+            requirement.evidence_ids = [
+                evidence_id
+                for evidence_id in requirement.evidence_ids
+                if evidence_id in valid_evidence_ids
+            ]
+
+        analysis.evidence = [
+            item
+            for item in analysis.evidence
+            if item.evidence_id in valid_evidence_ids
+        ]
+
+        verdict = compute_verdict(
+            is_relevant=True,
+            requirements=analysis.requirements,
+        )
+
+        return Judgment(
+            verdict=verdict,
+            relevance=relevance,
+            requirements=analysis.requirements,
+            violations=analysis.violations,
+            missing_evidence=analysis.missing_evidence,
+            evidence=analysis.evidence,
+            explanation=analysis.explanation,
+        )
+
+    def _classify_relevance(
+        self,
+        request: ComplianceRequest,
+        evidence_text: str,
+    ) -> RelevanceDecision:
+        prompt = f"""
+You are a policy-evidence relevance classifier.
+
+Your only task is to decide whether at least one supplied evidence item
+contains a corporate-policy obligation that governs the SUBJECT of the
+employee request.
+
+Use only the supplied evidence.
+
+RELEVANT:
+At least one evidence item contains a policy obligation applicable to
+the request's subject, even if the request lacks enough facts to assess
+compliance.
+
+IRRELEVANT:
+No supplied evidence governs the request's subject.
+
+Shared words do not establish relevance. For example, expense policy
+that mentions "approval" is irrelevant to an access-control request.
+
+If RELEVANT, cite one or more governing evidence IDs.
+If IRRELEVANT, governing_evidence_ids must be empty.
+
+EMPLOYEE REQUEST
+Employee: {request.employee}
+Department: {request.department}
+Request: {request.request}
+Reason: {request.reason}
+Additional information: {request.additional_information}
+
+SUPPLIED POLICY EVIDENCE
+{evidence_text}
+""".strip()
 
         response = self.client.models.generate_content(
             model=self.model,
             contents=prompt,
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
-                response_schema=Judgment,
+                response_schema=RelevanceDecision,
             ),
         )
 
+        if response.parsed is None:
+            raise ValueError("Gemini returned no structured relevance result")
+
         return response.parsed
 
-    def _build_prompt(
+    def _analyze_requirements(
         self,
         request: ComplianceRequest,
-        evidence: list[RerankedChunk]
-    ) -> str:
+        evidence_text: str,
+    ) -> AnalysisResult:
+        prompt = f"""
+You are PolicyLens, a corporate policy compliance analyst.
 
-        evidence_text = ""
+Use only the supplied policy evidence and employee request.
 
-        for i, chunk in enumerate(evidence, start=1):
+Identify each applicable, independent POLICY OBLIGATION and evaluate it.
 
-            evidence_text += f"""
-[EVIDENCE {i}] (relevance score: {chunk.rerank_score:.3f})
+A policy obligation is one enforceable policy rule.
+
+CRITICAL RULE:
+Do not split mandatory conditions within a single policy rule into
+separate requirements.
+
+For example:
+
+"MFA and manager approval are required for privileged access."
+
+This is ONE requirement. If manager approval is absent, the one
+requirement is NOT_SATISFIED. Do not create a SATISFIED "MFA" requirement
+and a NOT_SATISFIED "approval" requirement.
+
+Split requirements only when the policy contains genuinely independent
+obligations that could independently be complied with or violated.
+
+Assign exactly one status to every requirement:
+
+SATISFIED:
+The request clearly demonstrates the obligation is fulfilled.
+
+NOT_SATISFIED:
+The request explicitly demonstrates the obligation is violated or
+unfulfilled.
+
+INSUFFICIENT_EVIDENCE:
+The policy applies, but the request lacks enough information to decide
+whether the obligation is fulfilled or violated.
+
+Rules:
+- Missing information is not a violation.
+- Do not invent policy text, sections, requirements, or facts.
+- Cite supplied evidence IDs for every requirement.
+- Do not use an unrelated policy merely because it shares words.
+- Do not decide the final verdict. Python will calculate it.
+- Return only applicable obligations.
+
+EMPLOYEE REQUEST
+Employee: {request.employee}
+Department: {request.department}
+Request: {request.request}
+Reason: {request.reason}
+Additional information: {request.additional_information}
+
+SUPPLIED POLICY EVIDENCE
+{evidence_text}
+""".strip()
+
+        response = self.client.models.generate_content(
+            model=self.model,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_schema=AnalysisResult,
+            ),
+        )
+
+        if response.parsed is None:
+            raise ValueError("Gemini returned no structured analysis result")
+
+        return response.parsed
+
+    @staticmethod
+    def _format_evidence(
+        evidence: list[RerankedChunk],
+    ) -> tuple[str, set[str]]:
+        blocks: list[str] = []
+        evidence_ids: set[str] = set()
+
+        for index, chunk in enumerate(evidence, start=1):
+            evidence_id = f"E{index}"
+            evidence_ids.add(evidence_id)
+
+            blocks.append(
+                f"""
+[EVIDENCE_ID: {evidence_id}]
+Reranker score: {chunk.rerank_score:.3f}
 Policy: {chunk.document}
 Section: {chunk.section}
 Title: {chunk.section_title}
@@ -57,175 +301,7 @@ Source: {chunk.source}
 
 Content:
 {chunk.text}
+""".strip()
+            )
 
-"""
-
-        prompt = f"""
-You are PolicyLens, a corporate policy compliance analyzer.
-
-Your task is to determine whether an employee request complies with
-the provided corporate policy evidence.
-
-IMPORTANT RULES:
-
-1. Use ONLY the provided policy evidence.
-2. Do not use general knowledge to invent policy requirements.
-3. Do not invent policy sections, policy text, or sources.
-4. Identify every policy requirement that applies to the request.
-5. Evaluate EACH applicable requirement independently.
-6. Explicitly stated violations must be marked NOT_SATISFIED.
-7. Missing information must be marked INSUFFICIENT_EVIDENCE.
-8. Do not assume missing information means a violation.
-9. Consider exceptions in the provided policy evidence when applicable.
-10. Every evidence item in the final answer must come from the provided
-    policy evidence.
-11. Do not evaluate unrelated policy requirements.
-12. Do not let one uncertain requirement override another requirement
-    whose status is clearly known.
-
-REQUIREMENT STATUS:
-
-For every applicable requirement, assign exactly ONE status:
-
-SATISFIED:
-The request and provided evidence clearly demonstrate that the
-requirement has been fulfilled.
-
-NOT_SATISFIED:
-The request or provided evidence clearly demonstrates that the
-requirement has been violated or not fulfilled.
-
-INSUFFICIENT_EVIDENCE:
-The requirement applies, but the provided request and evidence do not
-contain enough information to determine whether it is satisfied or
-violated.
-
-NON-APPLICABLE:
-The requirement does not apply to this request.
-
-IMPORTANT:
-Do NOT use INSUFFICIENT_EVIDENCE when the requirement is clearly
-violated.
-
-Do NOT use NOT_SATISFIED merely because information is missing.
-
-DECISION LOGIC:
-
-First determine which requirements actually apply.
-
-Then evaluate EVERY applicable requirement independently.
-
-Do NOT stop after finding the first uncertain requirement.
-
-The final verdict must be determined using the following logic:
-
-1. If the provided evidence does not contain any policy requirement
-   relevant to the subject of the request:
-   → IRRELEVANT
-
-2. If at least one applicable requirement is NOT_SATISFIED and at least
-   one other applicable requirement is SATISFIED:
-   → PARTIALLY_COMPLIANT
-
-3. If all applicable requirements are SATISFIED:
-   → COMPLIANT
-
-4. If all applicable requirements are NOT_SATISFIED:
-   → NON_COMPLIANT
-
-5. If there is no mixture of SATISFIED and NOT_SATISFIED requirements,
-   but at least one applicable requirement has INSUFFICIENT_EVIDENCE:
-   → INSUFFICIENT_EVIDENCE
-
-6. If some requirements are NON-APPLICABLE, ignore them when determining
-   the final verdict.
-
-CRITICAL PARTIAL-COMPLIANCE RULE:
-
-PARTIALLY_COMPLIANT means that the request clearly satisfies some
-applicable requirements and clearly fails some other applicable
-requirements.
-
-Example:
-
-Requirement A → SATISFIED
-Requirement B → NOT_SATISFIED
-Requirement C → NON-APPLICABLE
-
-Final verdict → PARTIALLY_COMPLIANT
-
-Another example:
-
-Requirement A → SATISFIED
-Requirement B → NOT_SATISFIED
-Requirement C → INSUFFICIENT_EVIDENCE
-
-Final verdict → PARTIALLY_COMPLIANT
-
-The existence of INSUFFICIENT_EVIDENCE does NOT override a clear
-mixture of SATISFIED and NOT_SATISFIED requirements.
-
-However:
-
-Requirement A → SATISFIED
-Requirement B → INSUFFICIENT_EVIDENCE
-
-Final verdict → INSUFFICIENT_EVIDENCE
-
-And:
-
-Requirement A → NOT_SATISFIED
-Requirement B → INSUFFICIENT_EVIDENCE
-
-Final verdict → INSUFFICIENT_EVIDENCE
-
-IRRELEVANT RULE:
-
-Use IRRELEVANT only when the provided policy evidence does not contain
-a policy requirement addressing the subject of the employee request.
-
-For example:
-
-Employee request → database access
-Provided evidence → expense reimbursement policy only
-
-Final verdict → IRRELEVANT
-
-Do NOT use IRRELEVANT simply because the evidence is incomplete.
-
-EVIDENCE RULES:
-
-For every requirement marked SATISFIED, NOT_SATISFIED, or
-INSUFFICIENT_EVIDENCE, provide the relevant evidence items that support
-that determination.
-
-Every evidence item must come directly from the provided evidence.
-
-Do not invent evidence.
-
-Do not use evidence from an unrelated policy merely because it contains
-similar words.
-
-EMPLOYEE REQUEST:
-
-Employee: {request.employee}
-Department: {request.department}
-
-Request:
-{request.request}
-
-Reason:
-{request.reason}
-
-Additional Information:
-{request.additional_information}
-
-
-POLICY EVIDENCE:
-
-{evidence_text}
-
-Return a structured compliance judgment.
-"""
-
-        return prompt
+        return "\n\n".join(blocks), evidence_ids
