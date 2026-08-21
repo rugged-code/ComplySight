@@ -22,4 +22,4 @@ class PolicyLensPipeline:
 
         judgement = self.judge.analyze(request = requests, evidence=reranked_chunks, query=query, reranker = self.reranker)
 
-        return judgement
+        return judgement    
