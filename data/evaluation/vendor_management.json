@@ -56,15 +56,15 @@
 "expected_verdict": "INSUFFICIENT_EVIDENCE",
 "explanation": "The request involves onboarding a new vendor, but it does not state whether a Vendor Risk Assessment (VRA) has been completed and logged in the centralized procurement portal, which is a mandatory prerequisite for all new vendors (4.1)."
 },
-{
-"case_id": "VND-005",
-"employee": "David O'Connor",
-"department": "Sales",
-"request": "I need to submit my travel expenses for last week's conference in Chicago, including flights, hotel, and meals with clients. Can you process this receipt for $1,200?",
-"reason": "To get reimbursed for a business trip.",
-"relevant_policy": "Vendor Management Policy",
-"relevant_sections": [],
-"expected_verdict": "IRRELEVANT",
-"explanation": "The request relates to employee expense reimbursement, not the evaluation, selection, or management of third-party vendors covered by the Vendor Management Policy."
-}
+  {
+    "case_id": "VND-005",
+    "employee": "David O'Connor",
+    "department": "Sales",
+    "request": "I need to submit my travel expenses for last week's conference in Chicago, including flights, hotel, and meals with clients. Can you process this receipt for $1,200?",
+    "reason": "To get reimbursed for a business trip.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). Submitting a single lump-sum receipt of $1,200 for combined travel expenses lacks itemized receipts for individual expenses."
+  }
 ]

@@ -55,15 +55,15 @@
 "expected_verdict": "INSUFFICIENT_EVIDENCE",
 "explanation": "Section 6.2 allows an exemption for dedicated R&D testing devices from MDM and OS updates, but only if they are permanently isolated on an offline, air-gapped network segment. The request lacks information on whether these tablets will be network-isolated, preventing a definitive compliance decision."
 },
-{
-"case_id": "DU-005",
-"employee": "Kevin O'Connor",
-"department": "Finance",
-"request": "I am submitting my expense report for my recent trip to the London office. Attached is the itemized receipt for my hotel stay, which cost $220 USD per night before taxes.",
-"reason": "Seeking reimbursement for corporate travel accommodations.",
-"relevant_policy": "Device Usage Policy",
-"relevant_sections": [],
-"expected_verdict": "IRRELEVANT",
-"explanation": "The request is regarding travel expense reimbursement and hotel cost limits, which is governed by the Expense & Reimbursement Policy, not the Device Usage Policy."
-}
+  {
+    "case_id": "DU-005",
+    "employee": "Kevin O'Connor",
+    "department": "Finance",
+    "request": "I am submitting my expense report for my recent trip to the London office. Attached is the itemized receipt for my hotel stay, which cost $220 USD per night before taxes.",
+    "reason": "Seeking reimbursement for corporate travel accommodations.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). While the itemized receipt for hotel stay ($220/night) is attached, the request lacks manager approval or corporate card confirmation."
+  }
 ]

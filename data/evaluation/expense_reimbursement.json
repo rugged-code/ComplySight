@@ -43,15 +43,15 @@
 "expected_verdict": "INSUFFICIENT_EVIDENCE",
 "explanation": "Section 4.5 specifies that standard cities have a $250/night limit, while high-cost cities have a $350/night limit. The request does not mention the destination city, so it cannot be determined if the $300 rate is compliant or violates the policy."
 },
-{
-"case_id": "EXP-005",
-"employee": "David O'Connor",
-"department": "IT Procurement",
-"request": "I need to renew the annual subscription for our department's cloud analytics software platform. The total cost for the upcoming year is $45,000. Can I get authorization to issue a purchase order to the provider?",
-"reason": "To renew a software service required for departmental operations.",
-"relevant_policy": "Expense & Reimbursement Policy",
-"relevant_sections": [],
-"expected_verdict": "IRRELEVANT",
-"explanation": "This request involves renewing a corporate vendor contract and issuing a purchase order for $45,000, which falls under the Vendor Management Policy, not the Expense & Reimbursement Policy designed for individual employee travel and out-of-pocket business expenses."
-}
+  {
+    "case_id": "EXP-005",
+    "employee": "David O'Connor",
+    "department": "IT Procurement",
+    "request": "I need to renew the annual subscription for our department's cloud analytics software platform. The total cost for the upcoming year is $45,000. Can I get authorization to issue a purchase order to the provider?",
+    "reason": "To renew a software service required for departmental operations.",
+    "relevant_policy": "Vendor Management Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Vendor Management Policy). Corporate software contract renewals require a logged Vendor Risk Assessment (VRA) and required approvals, which are not provided in the request."
+  }
 ]

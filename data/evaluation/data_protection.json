@@ -51,15 +51,15 @@
 "expected_verdict": "INSUFFICIENT_EVIDENCE",
 "explanation": "Section 4.2 requires collected PII fields to be explicitly designated as 'Required' in the Data Processing Register, or to have DPO approval if 'Optional'. The request does not provide this information, making compliance impossible to determine without it."
 },
-{
-"case_id": "DP-005",
-"employee": "Jessica Wong",
-"department": "Sales",
-"request": "I need to submit my receipts for the client lunch meeting we had yesterday. The total was $120, and I need to know the proper expense code to use.",
-"reason": "Submitting business expenses for a client meal.",
-"relevant_policy": "Data Protection Policy",
-"relevant_sections": [],
-"expected_verdict": "IRRELEVANT",
-"explanation": "This request pertains to expense reimbursement and financial processing, which does not involve the handling, storage, or processing of PII covered under the Data Protection Policy."
-}
+  {
+    "case_id": "DP-005",
+    "employee": "Jessica Wong",
+    "department": "Sales",
+    "request": "I need to submit my receipts for the client lunch meeting we had yesterday. The total was $120, and I need to know the proper expense code to use.",
+    "reason": "Submitting business expenses for a client meal.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). The request submits a $120 client lunch expense, but lacks required manager approval documentation and itemized receipt details."
+  }
 ]

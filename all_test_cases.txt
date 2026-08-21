@@ -1,0 +1,753 @@
+================================================================================
+FILE: access_control.json
+================================================================================
+
+[
+  {
+    "case_id": "AC-001",
+    "employee": "Rahul Sharma",
+    "department": "Engineering",
+    "request": "I need database administrator access to the production SQL server. I have attached the documented approvals from my direct manager, Sarah Jenkins, and the Director of Information Security, Mark Vance. Please provision this access to my dedicated administrative account, 'rsharma-admin'.",
+    "reason": "Requesting elevated system permissions for database management.",
+    "relevant_policy": "Access Control Policy",
+    "relevant_sections": [
+      "4.4"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "The request correctly includes explicit approval from both the direct manager and the Director of Information Security, and specifies that the privileged access should be assigned to a separate, dedicated administrative account, satisfying all requirements of Section 4.4."
+  },
+  {
+    "case_id": "AC-002",
+    "employee": "Amanda Chen",
+    "department": "Marketing",
+    "request": "Please create a network access account for our new external marketing consultant, Jane Doe from CreativeAgency. I will serve as her internal sponsor. Set the account to expire automatically in 60 days to match the length of her initial contract.",
+    "reason": "Onboarding a third-party vendor and requesting network access.",
+    "relevant_policy": "Access Control Policy",
+    "relevant_sections": [
+      "4.8"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "The request asks for a 60-day expiration date, which directly violates Section 4.8. Third-party vendor accounts must be provisioned with a hard expiration date not exceeding 30 days from creation, and any further access requires a manual extension."
+  },
+  {
+    "case_id": "AC-003",
+    "employee": "Marcus Wright",
+    "department": "Sales",
+    "request": "Hello IT, I am submitting this request through the ITSM portal. Please grant me standard user access to the Salesforce reporting module so I can generate my end-of-month pipeline reports.",
+    "reason": "Requesting standard system access to a new application module.",
+    "relevant_policy": "Access Control Policy",
+    "relevant_sections": [
+      "4.3"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "The employee correctly submitted the standard access request through the ITSM portal as required by Section 4.3, but the request is missing the required documented approval from the requestor's direct manager."
+  },
+  {
+    "case_id": "AC-004",
+    "employee": "Priya Patel",
+    "department": "IT Operations",
+    "request": "I am configuring the new legacy inventory system which inherently cannot support Multi-Factor Authentication. Please create the system accounts and bypass the MFA enforcement on these logins so the application can function.",
+    "reason": "Requesting an MFA exemption for a newly configured legacy application.",
+    "relevant_policy": "Access Control Policy",
+    "relevant_sections": [
+      "4.1",
+      "6.1"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "While Section 6.1 allows MFA exemptions for legacy systems, there is insufficient evidence to determine compliance. The request does not specify if the system is isolated on a restricted network segment, nor does it include the formally documented exception approved by the CISO."
+  },
+  {
+    "case_id": "AC-005",
+    "employee": "David Kim",
+    "department": "Finance",
+    "request": "My team is planning a client dinner next week. Can you confirm the maximum allowable per-person meal limit and whether we can expense alcoholic beverages during this client entertainment event?",
+    "reason": "Inquiring about expense limits and reimbursable client entertainment items.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). The request inquires about client dinner meal limits and alcohol reimbursement, but lacks full submission details and required approvals."
+  }
+]
+
+================================================================================
+FILE: data_protection.json
+================================================================================
+
+[
+  {
+    "case_id": "DP-001",
+    "employee": "Priya Patel",
+    "department": "QA Engineering",
+    "request": "I am preparing a new test environment for the upcoming release. I need to populate the QA database with recent customer data. I will run the standard automated data masking script to tokenize all PII before the data is copied over from production.",
+    "reason": "Preparing a realistic testing environment for a software release.",
+    "relevant_policy": "Data Protection Policy",
+    "relevant_sections": [
+      "4.5"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "The request explicitly states that an automated data masking script will be used before transferring PII to the non-production QA environment, which fully complies with Section 4.5."
+  },
+  {
+    "case_id": "DP-002",
+    "employee": "Mark Jenkins",
+    "department": "Data Analytics",
+    "request": "I need to share the raw European customer marketing dataset with our analytics team in the India office. I've added the transfer to the Global Transfer Registry, and I will send the CSV file via standard email so they can get started right away.",
+    "reason": "Cross-team collaboration for global campaign analysis.",
+    "relevant_policy": "Data Protection Policy",
+    "relevant_sections": [
+      "4.7"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "While the transfer is logged in the Global Transfer Registry, sending the data via standard email violates the requirement in Section 4.7 that cross-border transfers utilize end-to-end AES-256 encryption."
+  },
+  {
+    "case_id": "DP-003",
+    "employee": "Sarah Lewis",
+    "department": "Database Administration",
+    "request": "I need direct write access to the production customer database to run an emergency cleanup script on corrupted PII records. I have attached the documented approval from my direct manager authorizing this access.",
+    "reason": "Emergency database maintenance to fix corrupted records.",
+    "relevant_policy": "Data Protection Policy",
+    "relevant_sections": [
+      "4.4"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "The request satisfies the requirement for the direct manager's approval, but it is missing the mandatory dual approval from the Data Privacy Office (DPO) required by Section 4.4 for direct access to production databases containing PII."
+  },
+  {
+    "case_id": "DP-004",
+    "employee": "David Chen",
+    "department": "Marketing",
+    "request": "We are launching a new lead generation form on the website. I have set it up to collect the user's full name, email address, and their personal social media handles so we can better target our ad campaigns.",
+    "reason": "Improving marketing campaign targeting through better lead generation.",
+    "relevant_policy": "Data Protection Policy",
+    "relevant_sections": [
+      "4.2"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "Section 4.2 requires collected PII fields to be explicitly designated as 'Required' in the Data Processing Register, or to have DPO approval if 'Optional'. The request does not provide this information, making compliance impossible to determine without it."
+  },
+  {
+    "case_id": "DP-005",
+    "employee": "Jessica Wong",
+    "department": "Sales",
+    "request": "I need to submit my receipts for the client lunch meeting we had yesterday. The total was $120, and I need to know the proper expense code to use.",
+    "reason": "Submitting business expenses for a client meal.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). The request submits a $120 client lunch expense, but lacks required manager approval documentation and itemized receipt details."
+  }
+]
+
+================================================================================
+FILE: device_usage.json
+================================================================================
+
+[
+  {
+    "case_id": "DU-001",
+    "employee": "David Chen",
+    "department": "Engineering",
+    "request": "I am requesting local administrator privileges for my newly assigned primary macOS workstation. I have attached my completion certificate for the 'Secure Developer Workstation' training module, as well as the documented email approval from the VP of Engineering.",
+    "reason": "Needs elevated permissions to configure local containerization tools and development frameworks.",
+    "relevant_policy": "Device Usage Policy",
+    "relevant_sections": [
+      "4.9",
+      "6.1"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "While Section 4.9 restricts standard users from having local administrator rights, the employee satisfies all conditions of the exception in Section 6.1 for Software Engineers (primary workstation, completed training, and documented VP of Engineering approval)."
+  },
+  {
+    "case_id": "DU-002",
+    "employee": "Sarah Jenkins",
+    "department": "Marketing",
+    "request": "I have downloaded and installed a peer-to-peer (P2P) file-sharing client on my company-issued laptop to help quickly distribute large promotional video files to our external media partners.",
+    "reason": "Attempting to bypass email attachment size limits for large marketing assets.",
+    "relevant_policy": "Device Usage Policy",
+    "relevant_sections": [
+      "4.4"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "Section 4.4 strictly prohibits the downloading, installation, or execution of peer-to-peer (P2P) file-sharing applications on all company-issued devices, making this action a direct violation."
+  },
+  {
+    "case_id": "DU-003",
+    "employee": "Marcus Wright",
+    "department": "Sales",
+    "request": "I am setting up my personal smartphone to access my corporate email and calendar while traveling. I have formally registered the device in the IT Asset Management portal just a few hours after HR approved my BYOD request. However, since this is my personal phone, I am opting out of installing the NovaTech MDM profile.",
+    "reason": "Wants to access corporate data on a personal device without submitting to centralized corporate management.",
+    "relevant_policy": "Device Usage Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "The employee successfully complied with Section 4.1 by registering the BYOD device in the portal within 48 hours. However, they violated Section 4.2, which mandates that any mobile device synchronizing corporate email or calendars must actively install the official NovaTech MDM profile."
+  },
+  {
+    "case_id": "DU-004",
+    "employee": "Dr. Elena Rostova",
+    "department": "Research & Development",
+    "request": "I am requesting an exemption from the mandatory Mobile Device Management (MDM) enrollment and the 14-day OS security update requirement for three dedicated laboratory tablets. These devices are used exclusively by the R&D team for vulnerability analysis testing.",
+    "reason": "Standard corporate updates and management profiles interfere with specialized diagnostic software.",
+    "relevant_policy": "Device Usage Policy",
+    "relevant_sections": [
+      "4.2",
+      "4.3",
+      "6.2"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "Section 6.2 allows an exemption for dedicated R&D testing devices from MDM and OS updates, but only if they are permanently isolated on an offline, air-gapped network segment. The request lacks information on whether these tablets will be network-isolated, preventing a definitive compliance decision."
+  },
+  {
+    "case_id": "DU-005",
+    "employee": "Kevin O'Connor",
+    "department": "Finance",
+    "request": "I am submitting my expense report for my recent trip to the London office. Attached is the itemized receipt for my hotel stay, which cost $220 USD per night before taxes.",
+    "reason": "Seeking reimbursement for corporate travel accommodations.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). While the itemized receipt for hotel stay ($220/night) is attached, the request lacks manager approval or corporate card confirmation."
+  }
+]
+
+================================================================================
+FILE: employee_conduct.json
+================================================================================
+
+[
+  {
+    "case_id": "EC-001",
+    "employee": "Aisha Patel",
+    "department": "Design",
+    "request": "I have submitted the Secondary Employment Request form to the HR portal for a weekend freelance design gig. I have attached the emails showing explicit written approval from both my direct manager and my HR representative.",
+    "reason": "Requesting to take on outside employment.",
+    "relevant_policy": "Employee Conduct Policy",
+    "relevant_sections": [
+      "4.2"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "The employee successfully followed Section 4.2 by submitting the formal request form to the HR portal and securing explicit written approval from both their direct manager and HR prior to accepting the outside employment."
+  },
+  {
+    "case_id": "EC-002",
+    "employee": "Marcus Johnson",
+    "department": "Sales",
+    "request": "I am heading to a scheduled in-person meeting with a prospective external client at their headquarters. Since it is extremely hot outside today, I am wearing business professional slacks and a dress shirt, but I left my blazer at the office.",
+    "reason": "Attending an on-site client meeting.",
+    "relevant_policy": "Employee Conduct Policy",
+    "relevant_sections": [
+      "4.9"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "Section 4.9 explicitly requires employees to wear a tailored jacket or blazer when attending scheduled, in-person meetings with external clients, with no stated exceptions for weather."
+  },
+  {
+    "case_id": "EC-003",
+    "employee": "Liam Chen",
+    "department": "Customer Support",
+    "request": "I woke up severely ill this morning and will miss my entire shift. I used the approved internal messaging platform to notify my manager 45 minutes before my shift was scheduled to begin.",
+    "reason": "Notifying manager of an unplanned absence.",
+    "relevant_policy": "Employee Conduct Policy",
+    "relevant_sections": [
+      "4.1"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "The employee satisfied the communication method by using the approved internal messaging platform, but violated the timing requirement. Section 4.1 mandates notification at least 2 hours prior to the scheduled shift start time."
+  },
+  {
+    "case_id": "EC-004",
+    "employee": "Sarah Jenkins",
+    "department": "Marketing",
+    "request": "While waiting for my flight at the public airport terminal, I opened my company laptop to review our upcoming product launch strategy documents.",
+    "reason": "Working in a public space while traveling.",
+    "relevant_policy": "Employee Conduct Policy",
+    "relevant_sections": [
+      "4.6"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "Section 4.6 requires a privacy screen filter when viewing Internal or Confidential data in public spaces. The request lacks information on whether the strategy documents are classified as Internal/Confidential, and it does not state whether the employee was using a privacy screen."
+  },
+  {
+    "case_id": "EC-005",
+    "employee": "David O'Connor",
+    "department": "Finance",
+    "request": "I need to request a standing desk and an ergonomic mouse for my home office to help prevent back and wrist strain during long hours of financial modeling.",
+    "reason": "Requesting ergonomic furniture for remote work.",
+    "relevant_policy": "Employee Conduct Policy",
+    "relevant_sections": [],
+    "expected_verdict": "IRRELEVANT",
+    "explanation": "The Employee Conduct Policy governs behavioral standards, relationships, and acceptable use of systems. It does not cover procedures for requesting ergonomic furniture, home office equipment, or medical accommodations."
+  }
+]
+
+================================================================================
+FILE: expense_reimbursement.json
+================================================================================
+
+[
+  {
+    "case_id": "EXP-001",
+    "employee": "Rahul Sharma",
+    "department": "Engineering",
+    "request": "I am submitting my expense report for a domestic business trip to Chicago that ended 10 days ago. I booked an economy class flight for $350 and stayed two nights at a hotel for $200 per night. I used my corporate credit card for these expenses and have attached the itemized receipts for both. My direct manager has already approved the report in the system.",
+    "reason": "To claim reimbursement for flights and hotel accommodations from a business trip.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.9"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "The request satisfies all conditions: itemized receipts provided for expenses >$25 (4.1), submitted within 30 days (4.2), manager approved (4.3), domestic flight was economy class (4.4), hotel is under the $250 standard limit (4.5), and corporate card was used for expenses >$100 (4.9)."
+  },
+  {
+    "case_id": "EXP-002",
+    "employee": "Jane Doe",
+    "department": "Sales",
+    "request": "Submitting my individual dinner expense from my business trip to Austin yesterday. The total was $65, and I paid with my personal credit card since it was under $100. I have attached the itemized receipt, which shows a $50 food order and a $15 alcoholic beverage.",
+    "reason": "To get reimbursed for a daily individual meal incurred during business travel.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.6",
+      "4.9"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "While the total meal cost ($65) is under the $75 daily limit and using a personal card for under $100 is acceptable, section 4.6 strictly states that the purchase of alcohol is non-reimbursable for individual employee meals."
+  },
+  {
+    "case_id": "EXP-003",
+    "employee": "Michael Chang",
+    "department": "Marketing",
+    "request": "I am submitting a client entertainment expense from a dinner meeting held 5 days ago. The total bill was $400 for two attendees ($200 per person). I used my corporate credit card and attached the original itemized receipt. My direct manager has approved this expense report in the system.",
+    "reason": "To reimburse the cost of a dinner hosted for a prospective client.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2",
+      "4.7",
+      "4.9"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "The submission met the receipt (4.1), deadline (4.2), and corporate card (4.9) rules. However, because the cost exceeded $150 per attendee, section 4.7 requires pre-approval from a Department Director and the final report must list the attendees' names, titles, affiliations, and business topics discussed, all of which are missing."
+  },
+  {
+    "case_id": "EXP-004",
+    "employee": "Sarah Jenkins",
+    "department": "Operations",
+    "request": "I am submitting my hotel expense for a 3-night business trip I returned from last week. The total cost was $900, equating to $300 per night. I used the corporate card for the transaction and have uploaded the itemized receipt to the system.",
+    "reason": "To claim reimbursement for hotel lodging during an authorized business trip.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2",
+      "4.5",
+      "4.9"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "Section 4.5 specifies that standard cities have a $250/night limit, while high-cost cities have a $350/night limit. The request does not mention the destination city, so it cannot be determined if the $300 rate is compliant or violates the policy."
+  },
+  {
+    "case_id": "EXP-005",
+    "employee": "David O'Connor",
+    "department": "IT Procurement",
+    "request": "I need to renew the annual subscription for our department's cloud analytics software platform. The total cost for the upcoming year is $45,000. Can I get authorization to issue a purchase order to the provider?",
+    "reason": "To renew a software service required for departmental operations.",
+    "relevant_policy": "Vendor Management Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Vendor Management Policy). Corporate software contract renewals require a logged Vendor Risk Assessment (VRA) and required approvals, which are not provided in the request."
+  }
+]
+
+================================================================================
+FILE: incident_response.json
+================================================================================
+
+[
+  {
+    "case_id": "IR-001",
+    "employee": "Sarah Jenkins",
+    "department": "Security Operations",
+    "request": "I have detected active command-and-control beaconing from a standard user workstation. I immediately captured a full volatile memory (RAM) dump and a bit-for-bit forensic disk image. It has been 45 minutes since confirmation, and I am now proceeding to logically isolate the endpoint from the network.",
+    "reason": "Executing standard containment protocol for a compromised endpoint.",
+    "relevant_policy": "Incident Response Policy",
+    "relevant_sections": [
+      "4.3",
+      "4.4"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "The analyst captured both the RAM dump and forensic disk image before taking further action, satisfying section 4.4. The endpoint is also being isolated well within the 2-hour window mandated by section 4.3."
+  },
+  {
+    "case_id": "IR-002",
+    "employee": "Michael Chang",
+    "department": "Sales",
+    "request": "I clicked on a link in an email this morning at 9:00 AM and a weird ransom message popped up. I got scared, so I did a hard reboot of my laptop. It's now 1:00 PM and it's still showing the ransom note, so I am finally reporting it to the IT Helpdesk.",
+    "reason": "Reporting a suspected security incident on a corporate laptop.",
+    "relevant_policy": "Incident Response Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.4"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "The employee failed to report the incident within the 1-hour timeframe (reporting 4 hours later), violating section 4.1. Additionally, the employee rebooted the compromised system, which is explicitly prohibited under section 4.4 as it destroys volatile memory evidence."
+  },
+  {
+    "case_id": "IR-003",
+    "employee": "David Okafor",
+    "department": "Security Operations",
+    "request": "A Severity Level 1 incident has been confirmed involving a breach of customer data. As the Incident Commander, I activated the CSIRT, and the core team assembled in the virtual war room 15 minutes ago. I just sent the initial tactical briefing and meeting agenda to all members using their standard corporate email accounts.",
+    "reason": "Coordinating the initial response strategy for a Severity Level 1 breach.",
+    "relevant_policy": "Incident Response Policy",
+    "relevant_sections": [
+      "4.2",
+      "4.5"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "The Incident Commander successfully activated the CSIRT and assembled them within the 30-minute requirement, complying with section 4.2. However, they violated section 4.5 by using standard corporate email to coordinate a Severity Level 1 incident, which strictly requires Out-of-Band (OOB) communication."
+  },
+  {
+    "case_id": "IR-004",
+    "employee": "Elena Rostova",
+    "department": "IT Operations",
+    "request": "The SOC has confirmed that Server-APP-09 is actively executing malware. The SOC Shift Lead has instructed me to unilaterally sever the server's network connection immediately to stop the spread. Do I have authorization to execute this disconnect right now?",
+    "reason": "Following SOC directives to contain a compromised server.",
+    "relevant_policy": "Incident Response Policy",
+    "relevant_sections": [
+      "4.3",
+      "4.7",
+      "6.1"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "While the SOC Shift Lead has unilateral authority to isolate endpoints (section 4.7) to meet the 2-hour containment window (section 4.3), there is missing information regarding the server's classification. If Server-APP-09 is designated as a 'Mission-Critical Production System', section 6.1 states it is exempt from unilateral isolation and requires CTO approval. Without knowing the CMDB classification, compliance cannot be determined."
+  },
+  {
+    "case_id": "IR-005",
+    "employee": "Liam O'Connor",
+    "department": "Marketing",
+    "request": "I am traveling to an industry conference next week and I want to know if I am allowed to expense a business-class flight since the flight duration is 8 hours. I also need to know the daily meal allowance.",
+    "reason": "Booking travel and accommodation for an upcoming corporate event.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). The employee is inquiring about business-class flight exceptions and meal allowances prior to submission."
+  }
+]
+
+================================================================================
+FILE: information_security.json
+================================================================================
+
+[
+  {
+    "case_id": "SEC-001",
+    "employee": "Sarah Jenkins",
+    "department": "IT Operations",
+    "request": "Applying the vendor-released 'Critical' security patch for Apache to all production web servers. The patch was released yesterday at 9 AM, we tested it in staging yesterday afternoon, and are rolling it out to production today at 10 AM.",
+    "reason": "Routine server maintenance",
+    "relevant_policy": "Information Security Policy",
+    "relevant_sections": [
+      "4.7"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "Section 4.7 requires Critical patches to be tested and applied to production servers within 48 hours of release. The request demonstrates testing and deployment within approximately 25 hours, fulfilling the requirement."
+  },
+  {
+    "case_id": "SEC-002",
+    "employee": "Mark Torres",
+    "department": "Marketing",
+    "request": "Please temporarily disable the USB write block on my workstation. I need to copy some internal campaign assets to my personal, unencrypted thumb drive so I can work on them on my home computer over the weekend.",
+    "reason": "Weekend project work",
+    "relevant_policy": "Information Security Policy",
+    "relevant_sections": [
+      "4.5"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "Section 4.5 strictly prohibits transferring company data to unencrypted removable media and mandates that USB write access remain disabled. The request directly violates these controls."
+  },
+  {
+    "case_id": "SEC-003",
+    "employee": "David Chen",
+    "department": "Engineering",
+    "request": "Deploying the new legacy inventory tracking module. It processes Internal data but is technically incapable of supporting TLS 1.2, so it is using TLS 1.1. We have already isolated it within a tightly restricted, internal-only network segment.",
+    "reason": "Legacy application deployment",
+    "relevant_policy": "Information Security Policy",
+    "relevant_sections": [
+      "4.3",
+      "6.1"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "Section 4.3 mandates TLS 1.2+ for Internal data in transit. Section 6.1 provides an exception for legacy systems using TLS 1.1 if isolated on a restricted segment AND formally approved by the CISO. While the isolation requirement is met, the CISO approval is missing, rendering it only partially compliant."
+  },
+  {
+    "case_id": "SEC-004",
+    "employee": "Aisha Patel",
+    "department": "Data Science",
+    "request": "We created a new dataset of user behavior analytics 10 days ago and assigned it a classification label. We are now requesting a new cloud storage bucket to house this data long-term.",
+    "reason": "Storage provisioning for new dataset",
+    "relevant_policy": "Information Security Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "While Section 4.1's 30-day classification timeline is met, it is unknown what classification label was assigned. Without knowing if the data is Confidential or Restricted, it is impossible to determine if Section 4.2's encryption-at-rest requirement applies or is being satisfied by the new bucket."
+  },
+  {
+    "case_id": "SEC-005",
+    "employee": "Liam Murphy",
+    "department": "Sales",
+    "request": "Submitting my expense report for a $120 dinner with a prospective client in Chicago last Tuesday. The itemized receipt is attached to the travel portal.",
+    "reason": "Client entertainment reimbursement",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.7"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). The submission for a $120 client dinner with an itemized receipt attached satisfies all applicable requirements for client entertainment under the $150 per person limit."
+  }
+]
+
+================================================================================
+FILE: password_authentication.json
+================================================================================
+
+[
+  {
+    "case_id": "AUTH-001",
+    "employee": "Sarah Jenkins",
+    "department": "Data Engineering",
+    "request": "I am setting up a nightly ETL job that extracts data from the sales database. I have configured it to use a non-interactive service account. I haven't hardcoded the credentials into the Python script; instead, the script fetches the API token dynamically from our enterprise secret vault, which is configured to rotate the secret every 30 days.",
+    "reason": "Need automated system access without interactive login.",
+    "relevant_policy": "Password & Authentication Policy",
+    "relevant_sections": [
+      "4.8",
+      "6.1"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "The request avoids hardcoded credentials (satisfying 4.8) and properly applies the service account exception for rotation by using the enterprise secret vault set to 30-day rotation (satisfying 6.1)."
+  },
+  {
+    "case_id": "AUTH-002",
+    "employee": "Mark Dillard",
+    "department": "Marketing",
+    "request": "I just updated my main active directory password to 'Marketing2026!Strategy', which is 22 characters long. Since I have to log into so many different vendor portals every day, I clicked 'Save Password' in Google Chrome so it auto-fills next time.",
+    "reason": "Convenience for daily portal logins.",
+    "relevant_policy": "Password & Authentication Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2",
+      "4.9"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "While the password length and complexity meet requirements (4.1, 4.2), the employee explicitly used Google Chrome's built-in password saving feature, which is strictly prohibited by section 4.9."
+  },
+  {
+    "case_id": "AUTH-003",
+    "employee": "David Chen",
+    "department": "IT Operations",
+    "request": "I am racking the new Cisco firewall appliance into the production datacenter. Before plugging the uplink cable in, I accessed the local console and changed the default vendor password from 'admin' to a custom string: 'F1r3w@ll2025'. I will now connect it to the main network.",
+    "reason": "Deploying new network hardware.",
+    "relevant_policy": "Password & Authentication Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2",
+      "4.10"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "The employee successfully changed the default vendor password before connecting to the production network (satisfying 4.10) and included necessary complexity (satisfying 4.2). However, the new password 'F1r3w@ll2025' is only 12 characters long, violating the 15-character minimum for interactive accounts required by 4.1."
+  },
+  {
+    "case_id": "AUTH-004",
+    "employee": "Alicia Torres",
+    "department": "Sales",
+    "request": "I'm working from the airport lounge today and need to access the internal CRM system. I've connected to the company Virtual Private Network (VPN) using my username and my new 18-character complex password.",
+    "reason": "Remote access to internal systems while traveling.",
+    "relevant_policy": "Password & Authentication Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.7"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "The user satisfies the minimum password length requirement (4.1), but because they are logging in from outside the corporate LAN via VPN, section 4.7 requires MFA enforcement. The request does not mention whether MFA was prompted or used, leaving insufficient evidence to determine full compliance."
+  },
+  {
+    "case_id": "AUTH-005",
+    "employee": "Brian Kowalski",
+    "department": "Finance",
+    "request": "I have been experiencing lower back pain while working at my desk. I would like to request an ergonomic chair replacement for my cubicle. I have a doctor's note recommending enhanced lumbar support.",
+    "reason": "Ergonomic office equipment request.",
+    "relevant_policy": "Password & Authentication Policy",
+    "relevant_sections": [],
+    "expected_verdict": "IRRELEVANT",
+    "explanation": "The request pertains to physical office furniture and ergonomics, which has no connection to password creation, account lockouts, or authentication controls governed by this policy."
+  }
+]
+
+================================================================================
+FILE: remote_work.json
+================================================================================
+
+[
+  {
+    "case_id": "RW-001",
+    "employee": "Rahul Sharma",
+    "department": "Engineering",
+    "request": "I am applying for a Remote Work Agreement. I have been with NovaTech for 2 years. I have submitted the request via the HR portal, and both my manager and HRBP have documented their approval. I will work from my home office which has a door that can be closed. I will be online and available from 10:00 AM to 3:00 PM local time. My internet speed test shows 150 Mbps download and 25 Mbps upload. I will strictly use my company-issued laptop connected to the corporate VPN, and my children are enrolled in full-time daycare.",
+    "reason": "Employee is requesting a standard remote work arrangement and has provided all necessary details.",
+    "relevant_policy": "Remote Work Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5",
+      "4.6",
+      "4.7",
+      "4.8"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "The request satisfies all conditions: 90-day tenure met (4.1), proper portal approvals obtained (4.2), core hours committed (4.3), private workspace confirmed (4.4), internet speeds exceed the 50/10 Mbps minimum (4.5), company hardware and VPN are used (4.6, 4.7), and dependent care is arranged (4.8)."
+  },
+  {
+    "case_id": "RW-002",
+    "employee": "Priya Patel",
+    "department": "Marketing",
+    "request": "I have submitted my RWA in the HR portal and received manager and HRBP approval. I have been here 18 months, my kids are in school, and I have a dedicated office with a door. I will work the core hours of 10 AM to 3 PM. Since my company laptop has been freezing, I will be conducting my remote work exclusively on my personally owned MacBook Pro. I have a 300 Mbps internet connection and will use the company VPN.",
+    "reason": "Employee is requesting remote work but intends to use a personal device.",
+    "relevant_policy": "Remote Work Policy",
+    "relevant_sections": [
+      "4.6"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "The request explicitly violates Section 4.6, which strictly prohibits processing corporate data on personally owned computing devices and mandates the exclusive use of NovaTech Solutions-issued hardware."
+  },
+  {
+    "case_id": "RW-003",
+    "employee": "David Kim",
+    "department": "Finance",
+    "request": "I am requesting approval for remote work. I have been with the company for 3 years. I submitted the request via the HR portal and it was approved by my manager and HRBP. I have a dedicated office with a door, 500 Mbps internet, and will use my company laptop and VPN. I will be online from 10 AM to 3 PM. This arrangement is perfect because it will allow me to act as the primary caregiver for my 2-year-old daughter during my shift instead of paying for daycare.",
+    "reason": "Employee meets technical and procedural requirements but intends to provide child care while working.",
+    "relevant_policy": "Remote Work Policy",
+    "relevant_sections": [
+      "4.2",
+      "4.4",
+      "4.5",
+      "4.6",
+      "4.8"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "While the employee meets the tenure, approval, connectivity, and hardware requirements, the request violates Section 4.8, which states that remote work is not a substitute for dependent care and employees must have primary care arrangements in place during scheduled hours."
+  },
+  {
+    "case_id": "RW-004",
+    "employee": "Sarah Jenkins",
+    "department": "Sales",
+    "request": "I am submitting my Remote Work Agreement via the HR portal today. I have been at NovaTech for 2 years. I plan to use my company-issued laptop connected to the VPN to do my work from home.",
+    "reason": "Employee is initiating a remote work request but omitted multiple key details required to determine full compliance.",
+    "relevant_policy": "Remote Work Policy",
+    "relevant_sections": [
+      "4.2",
+      "4.3",
+      "4.4",
+      "4.5"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "The policy applies, but critical information is missing to grant approval. It is unknown if the manager and HRBP have approved it yet (4.2), if the employee will be online during core hours (4.3), if the workspace has a door (4.4), or if the internet meets the 50/10 Mbps minimum requirements (4.5)."
+  },
+  {
+    "case_id": "RW-005",
+    "employee": "Michael Chang",
+    "department": "Human Resources",
+    "request": "I need to order a new ergonomic desk chair and a secondary monitor for my cubicle at the downtown corporate office. Please let me know what the budget limit is for in-office furniture requests.",
+    "reason": "Employee is asking about purchasing office furniture for a corporate office location.",
+    "relevant_policy": "Remote Work Policy",
+    "relevant_sections": [],
+    "expected_verdict": "IRRELEVANT",
+    "explanation": "This request pertains to procurement and office furniture for a primary corporate facility. It has no applicability to the Remote Work Policy, which only governs employees working from alternative worksites."
+  }
+]
+
+================================================================================
+FILE: vendor_management.json
+================================================================================
+
+[
+  {
+    "case_id": "VND-001",
+    "employee": "Sarah Jenkins",
+    "department": "Data Analytics",
+    "request": "I want to finalize the contract for DataCrush Inc., a new vendor that will process our Confidential analytics data. The annualized cost is $60,000. I have logged the approved Vendor Risk Assessment (VRA) in the procurement portal, obtained the signed Information Security Addendum (ISA) from their legal team, and attached the written approvals from the CFO and the Head of Procurement.",
+    "reason": "To establish a new analytics vendor relationship.",
+    "relevant_policy": "Vendor Management Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2",
+      "4.3"
+    ],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "The request satisfies all requirements for a new vendor processing Confidential data and exceeding $50k: a VRA is logged (4.1), an ISA is signed (4.2), and both CFO and Head of Procurement approved the cost (4.3)."
+  },
+  {
+    "case_id": "VND-002",
+    "employee": "Marcus Thorne",
+    "department": "Marketing",
+    "request": "Please issue a purchase order for $75,000 to CreativeSpark Agency for our annual advertising campaign. The vendor does not handle any sensitive data, so no ISA is needed, and the VRA was approved and logged yesterday. I have the written approval from the Head of Procurement attached.",
+    "reason": "To finalize the annual advertising agency contract.",
+    "relevant_policy": "Vendor Management Policy",
+    "relevant_sections": [
+      "4.1",
+      "4.2",
+      "4.3"
+    ],
+    "expected_verdict": "NON_COMPLIANT",
+    "explanation": "The contract value exceeds the $50,000 threshold and therefore requires explicit written approval from both the Head of Procurement and the Chief Financial Officer (CFO). The request explicitly only includes approval from the Head of Procurement, violating section 4.3."
+  },
+  {
+    "case_id": "VND-003",
+    "employee": "Liam Patel",
+    "department": "Human Resources",
+    "request": "I am terminating the contract with our recruitment vendor, TalentFlow. I have submitted the de-provisioning ticket to IT Operations to revoke all their network access. I also sent them an email asking them to reply confirming that all our company data has been deleted from their systems within 30 days.",
+    "reason": "To offboard a terminated vendor.",
+    "relevant_policy": "Vendor Management Policy",
+    "relevant_sections": [
+      "4.8",
+      "4.10"
+    ],
+    "expected_verdict": "PARTIALLY_COMPLIANT",
+    "explanation": "The business owner satisfied the access revocation requirement by submitting the de-provisioning ticket (4.8). However, the request violates data return rules by only asking for an email confirmation, whereas the policy strictly requires a cryptographically signed Certificate of Data Destruction (4.10)."
+  },
+  {
+    "case_id": "VND-004",
+    "employee": "Jessica Lin",
+    "department": "Facilities",
+    "request": "Please generate a purchase order for our new office cleaning vendor, CleanCo. The total annualized contract value is $20,000. I have attached the signed contract and they will start on the 1st of next month.",
+    "reason": "To hire a new cleaning service for the main office.",
+    "relevant_policy": "Vendor Management Policy",
+    "relevant_sections": [
+      "4.1"
+    ],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "The request involves onboarding a new vendor, but it does not state whether a Vendor Risk Assessment (VRA) has been completed and logged in the centralized procurement portal, which is a mandatory prerequisite for all new vendors (4.1)."
+  },
+  {
+    "case_id": "VND-005",
+    "employee": "David O'Connor",
+    "department": "Sales",
+    "request": "I need to submit my travel expenses for last week's conference in Chicago, including flights, hotel, and meals with clients. Can you process this receipt for $1,200?",
+    "reason": "To get reimbursed for a business trip.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). Submitting a single lump-sum receipt of $1,200 for combined travel expenses lacks itemized receipts for individual expenses."
+  }
+]
+

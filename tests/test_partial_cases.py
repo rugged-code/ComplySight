@@ -25,9 +25,11 @@ FAILED_CASES = {
 
 def load_failed_cases():
     cases = []
+
     for file_path in sorted(Path("data/evaluation").glob("*.json")):
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
+
         if isinstance(data, list):
             cases.extend(data)
         else:
@@ -57,13 +59,40 @@ def main():
             department=case["department"],
             request=case["request"],
             reason=case["reason"],
-            additional_information=case.get("additional_information", ""),
+            additional_information=case.get(
+                "additional_information",
+                "",
+            ),
         )
 
         query = build_retrieval_query(request)
         retrieved = retriever.retrieve(query)
-        reranked = reranker.rerank(query=query, chunks=retrieved, top_n=8)
-        judgment = judge.analyze(request=request, evidence=reranked)
+
+        # Rerank retrieved evidence.
+        reranked = reranker.rerank(
+            query=query,
+            chunks=retrieved,
+            top_n=8,
+        )
+
+        # Run compliance judge with retry for transient API hiccups.
+        judgment = None
+
+        for attempt in range(1, 4):
+            try:
+                judgment = judge.analyze(
+                    request=request,
+                    evidence=reranked,
+                    query=query,
+                    reranker=reranker,
+                )
+                break
+
+            except Exception as exc:
+                if attempt == 3:
+                    raise
+
+                time.sleep(3 * attempt)
 
         actual = judgment.verdict.value
         ok = actual == expected
@@ -75,27 +104,40 @@ def main():
             failed += 1
             status = "FAIL"
 
-        print(f"{case_id:12} | Expected: {expected:22} | Actual: {actual:22} | {status}")
+        print(
+            f"{case_id:12} | Expected: {expected:22} | "
+            f"Actual: {actual:22} | {status}"
+        )
 
-        results.append({
-            "case_id": case_id,
-            "expected": expected,
-            "actual": actual,
-            "passed": ok,
-        })
+        results.append(
+            {
+                "case_id": case_id,
+                "expected": expected,
+                "actual": actual,
+                "passed": ok,
+            }
+        )
 
         if i < len(cases) - 1:
             time.sleep(4)
 
     print("\n" + "=" * 60)
-    print(f"Total: {len(cases)}  |  Passed: {passed}  |  Failed: {failed}")
+    print(
+        f"Total: {len(cases)}  |  "
+        f"Passed: {passed}  |  "
+        f"Failed: {failed}"
+    )
     print(f"Accuracy: {passed / len(cases):.1%}")
     print("=" * 60)
 
     print("\nStill failing:")
+
     for r in results:
         if not r["passed"]:
-            print(f"  {r['case_id']}: {r['expected']} -> {r['actual']}")
+            print(
+                f"  {r['case_id']}: "
+                f"{r['expected']} -> {r['actual']}"
+            )
 
 
 if __name__ == "__main__":

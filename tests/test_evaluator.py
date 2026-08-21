@@ -101,7 +101,12 @@ def run_case(case, retriever, reranker, judge):
         }
 
     try:
-        judgment = judge.analyze(request=request, evidence=reranked)
+        judgment = judge.analyze(
+            request=request,
+            evidence=reranked,
+            query=query,
+            reranker=reranker,
+        )
         actual = judgment.verdict.value
     except Exception as e:
         print(f"JUDGE ERROR: {e}")

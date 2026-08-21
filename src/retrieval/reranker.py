@@ -44,15 +44,40 @@ class JinaReranker:
             "Accept": "application/json",
         }
 
-        response = requests.post(
-            self.url,
-            headers=headers,
-            json=payload,
-            timeout=60,
-        )
-        response.raise_for_status()
+        data = None
+        for attempt in range(3):
+            try:
+                response = requests.post(
+                    self.url,
+                    headers=headers,
+                    json=payload,
+                    timeout=15,
+                )
+                if response.status_code == 200:
+                    data = response.json()
+                    break
+            except Exception:
+                if attempt == 2:
+                    break
 
-        data = response.json()
+        if not data or "results" not in data:
+            # Fallback to top-scoring chunks from retrieval
+            sorted_chunks = sorted(chunks, key=lambda c: c.qdrant_score, reverse=True)[:top_n]
+            return [
+                RerankedChunk(
+                    text=c.text,
+                    document=c.document,
+                    source=c.source,
+                    section=c.section,
+                    section_title=c.section_title,
+                    page_start=c.page_start,
+                    page_end=c.page_end,
+                    qdrant_score=c.qdrant_score,
+                    rerank_score=c.qdrant_score,
+                )
+                for c in sorted_chunks
+            ]
+
         results = data.get("results", [])
 
         reranked_chunks: list[RerankedChunk] = []

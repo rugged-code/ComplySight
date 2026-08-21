@@ -37,7 +37,8 @@ class PolicyLensEvaluator:
             employee=test_case["employee"],
             department=test_case["department"],
             request=test_case["request"],
-            reason  = test_case["reason"],
+            reason=test_case["reason"],
+            additional_information=test_case.get("additional_information", ""),
         )
 
         retrieval_query = build_retrieval_query(request)

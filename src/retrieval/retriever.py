@@ -1,3 +1,5 @@
+import time
+import requests
 from src.ingestion.embedder import JinaEmbedder
 from src.ingestion.qdrant_store import QdrantStore
 from src.models.schemas import RetrievedChunk
@@ -19,12 +21,68 @@ class PolicyRetriever:
     def retrieve(self, query: str) -> list[RetrievedChunk]:
         query_vector = self.embedder.embed_query(query)
 
+        endpoint = f"{self.store.url.rstrip('/')}/collections/policylens_policies/points/query"
+        headers = {
+            "api-key": self.store.api_key,
+            "Content-Type": "application/json",
+        }
+        payload = {
+            "query": query_vector,
+            "limit": self.top_k,
+            "with_payload": True,
+        }
+        points = []
+        for attempt in range(3):
+            try:
+                res = requests.post(endpoint, headers=headers, json=payload, timeout=30)
+                if res.status_code == 200:
+                    points = res.json().get("result", {}).get("points", [])
+                    break
+            except Exception:
+                time.sleep(1.5)
+                if attempt == 2:
+                    break
+
+        retrieved_chunks: list[RetrievedChunk] = []
+        seen: set[tuple[str, str | None]] = set()
+
+        if points:
+            for point in points:
+                payload = point.get("payload", {})
+                score = float(point.get("score", 0.0))
+
+                key = (
+                    payload["document"],
+                    payload.get("section"),
+                )
+
+                if key in seen:
+                    continue
+
+                seen.add(key)
+
+                retrieved_chunks.append(
+                    RetrievedChunk(
+                        text=payload["text"],
+                        document=payload["document"],
+                        source=payload["source"],
+                        section=payload.get("section"),
+                        section_title=payload.get("section_title"),
+                        page_start=payload.get("page_start"),
+                        page_end=payload.get("page_end"),
+                        qdrant_score=score,
+                    )
+                )
+
+            return retrieved_chunks
+
+        # Fallback to qdrant_client
         response = self.store.client.query_points(
             collection_name="policylens_policies",
             query=query_vector,
             limit=self.top_k,
             with_payload=True,
-            timeout=120,
+            timeout=30,
         )
 
         retrieved_chunks: list[RetrievedChunk] = []
@@ -56,4 +114,4 @@ class PolicyRetriever:
                 )
             )
 
-        return retrieved_chunks
+        return retrieved_chunks

@@ -1,4 +1,5 @@
 import os
+import requests
 from dotenv import load_dotenv
 from qdrant_client import QdrantClient, models
 import uuid
@@ -11,15 +12,15 @@ VECTOR_SIZE=2048
 
 class QdrantStore:
     def __init__(self):
-        url = os.getenv("QDRANT_URL")
-        api_key = os.getenv("QDRANT_API_KEY")
+        self.url = os.getenv("QDRANT_URL")
+        self.api_key = os.getenv("QDRANT_API_KEY")
 
-        if not url:
+        if not self.url:
             raise ValueError("QDRANT url not found")
-        if not api_key:
+        if not self.api_key:
             raise ValueError("QDRANT api key not found")
 
-        self.client = QdrantClient(url=url, api_key=api_key,timeout=120)
+        self.client = QdrantClient(url=self.url, api_key=self.api_key, timeout=30, check_compatibility=False)
 
     def create_collection(self):
         if self.client.collection_exists(COLLECTION_NAME):
@@ -31,21 +32,54 @@ class QdrantStore:
         )
 
     def get_chunks_by_document(self, document_name: str):
-        points, _ = self.client.scroll(
-            collection_name=COLLECTION_NAME,
-            scroll_filter=models.Filter(
-                must=[
-                    models.FieldCondition(
-                        key="document",
-                        match=models.MatchValue(value=document_name),
-                    )
+        endpoint = f"{self.url.rstrip('/')}/collections/{COLLECTION_NAME}/points/scroll"
+        headers = {
+            "api-key": self.api_key,
+            "Content-Type": "application/json",
+        }
+        payload = {
+            "filter": {
+                "must": [
+                    {
+                        "key": "document",
+                        "match": {"value": document_name}
+                    }
                 ]
-            ),
-            limit=200,
-            with_payload=True,
-            with_vectors=False,
-        )
-        return points
+            },
+            "limit": 200,
+            "with_payload": True,
+            "with_vector": False,
+        }
+        for attempt in range(3):
+            try:
+                res = requests.post(endpoint, headers=headers, json=payload, timeout=15)
+                if res.status_code == 200:
+                    points_data = res.json().get("result", {}).get("points", [])
+                    class SimplePoint:
+                        def __init__(self, p):
+                            self.payload = p.get("payload", {})
+                    return [SimplePoint(p) for p in points_data]
+            except Exception:
+                if attempt == 2:
+                    break
+        try:
+            points, _ = self.client.scroll(
+                collection_name=COLLECTION_NAME,
+                scroll_filter=models.Filter(
+                    must=[
+                        models.FieldCondition(
+                            key="document",
+                            match=models.MatchValue(value=document_name),
+                        )
+                    ]
+                ),
+                limit=200,
+                with_payload=True,
+                with_vectors=False,
+            )
+            return points
+        except Exception:
+            return []
 
     def add_documents(self, chunks, vectors):
 

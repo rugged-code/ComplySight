@@ -56,15 +56,15 @@
 "expected_verdict": "INSUFFICIENT_EVIDENCE",
 "explanation": "While the SOC Shift Lead has unilateral authority to isolate endpoints (section 4.7) to meet the 2-hour containment window (section 4.3), there is missing information regarding the server's classification. If Server-APP-09 is designated as a 'Mission-Critical Production System', section 6.1 states it is exempt from unilateral isolation and requires CTO approval. Without knowing the CMDB classification, compliance cannot be determined."
 },
-{
-"case_id": "IR-005",
-"employee": "Liam O'Connor",
-"department": "Marketing",
-"request": "I am traveling to an industry conference next week and I want to know if I am allowed to expense a business-class flight since the flight duration is 8 hours. I also need to know the daily meal allowance.",
-"reason": "Booking travel and accommodation for an upcoming corporate event.",
-"relevant_policy": "Incident Response Policy",
-"relevant_sections": [],
-"expected_verdict": "IRRELEVANT",
-"explanation": "The request is regarding travel expenses, flight class restrictions, and meal allowances. This is entirely unrelated to the Incident Response Policy, which strictly governs the management and mitigation of cybersecurity incidents."
-}
+  {
+    "case_id": "IR-005",
+    "employee": "Liam O'Connor",
+    "department": "Marketing",
+    "request": "I am traveling to an industry conference next week and I want to know if I am allowed to expense a business-class flight since the flight duration is 8 hours. I also need to know the daily meal allowance.",
+    "reason": "Booking travel and accommodation for an upcoming corporate event.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). The employee is inquiring about business-class flight exceptions and meal allowances prior to submission."
+  }
 ]

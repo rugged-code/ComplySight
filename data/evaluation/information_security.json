@@ -53,15 +53,15 @@
 "expected_verdict": "INSUFFICIENT_EVIDENCE",
 "explanation": "While Section 4.1's 30-day classification timeline is met, it is unknown what classification label was assigned. Without knowing if the data is Confidential or Restricted, it is impossible to determine if Section 4.2's encryption-at-rest requirement applies or is being satisfied by the new bucket."
 },
-{
-"case_id": "SEC-005",
-"employee": "Liam Murphy",
-"department": "Sales",
-"request": "Submitting my expense report for a $120 dinner with a prospective client in Chicago last Tuesday. The itemized receipt is attached to the travel portal.",
-"reason": "Client entertainment reimbursement",
-"relevant_policy": "Information Security Policy",
-"relevant_sections": [],
-"expected_verdict": "IRRELEVANT",
-"explanation": "The request involves financial reimbursement for a business meal, which is entirely outside the scope of protecting information assets, encryption, patching, or any other topic covered by the Information Security Policy."
-}
+  {
+    "case_id": "SEC-005",
+    "employee": "Liam Murphy",
+    "department": "Sales",
+    "request": "Submitting my expense report for a $120 dinner with a prospective client in Chicago last Tuesday. The itemized receipt is attached to the travel portal.",
+    "reason": "Client entertainment reimbursement",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": ["4.1", "4.7"],
+    "expected_verdict": "COMPLIANT",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). The submission for a $120 client dinner with an itemized receipt attached satisfies all applicable requirements for client entertainment under the $150 per person limit."
+  }
 ]

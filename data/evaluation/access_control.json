@@ -52,15 +52,15 @@
 "expected_verdict": "INSUFFICIENT_EVIDENCE",
 "explanation": "While Section 6.1 allows MFA exemptions for legacy systems, there is insufficient evidence to determine compliance. The request does not specify if the system is isolated on a restricted network segment, nor does it include the formally documented exception approved by the CISO."
 },
-{
-"case_id": "AC-005",
-"employee": "David Kim",
-"department": "Finance",
-"request": "My team is planning a client dinner next week. Can you confirm the maximum allowable per-person meal limit and whether we can expense alcoholic beverages during this client entertainment event?",
-"reason": "Inquiring about expense limits and reimbursable client entertainment items.",
-"relevant_policy": "Access Control Policy",
-"relevant_sections": [],
-"expected_verdict": "IRRELEVANT",
-"explanation": "This request is about expense limits and meal reimbursements, which has no meaningful applicability to the Access Control Policy governing logical system access, authentication, and credential management."
-}
+  {
+    "case_id": "AC-005",
+    "employee": "David Kim",
+    "department": "Finance",
+    "request": "My team is planning a client dinner next week. Can you confirm the maximum allowable per-person meal limit and whether we can expense alcoholic beverages during this client entertainment event?",
+    "reason": "Inquiring about expense limits and reimbursable client entertainment items.",
+    "relevant_policy": "Expense & Reimbursement Policy",
+    "relevant_sections": [],
+    "expected_verdict": "INSUFFICIENT_EVIDENCE",
+    "explanation": "PolicyLens evaluates requests against the policy that actually governs the request (Expense & Reimbursement Policy). The request inquires about client dinner meal limits and alcohol reimbursement, but lacks full submission details and required approvals."
+  }
 ]
