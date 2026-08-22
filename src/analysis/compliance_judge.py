@@ -294,7 +294,7 @@ SUPPLIED POLICY EVIDENCE:
         evidence_text: str,
     ) -> AnalysisResult:
         prompt = f"""
-You are PolicyLens, an expert corporate compliance analyst.
+You are ComplySight, an expert corporate compliance analyst.
 
 Analyze the employee request against the supplied policy evidence.
 

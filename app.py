@@ -5,7 +5,7 @@ from src.models.schemas import ComplianceRequest
 
 
 st.set_page_config(
-    page_title="PolicyLens",
+    page_title="ComplySight",
     page_icon="🔍",
     layout="wide"
 )
@@ -17,7 +17,7 @@ pipeline = PolicyLensPipeline()
 
 with st.sidebar:
 
-    st.title("🔍 PolicyLens")
+    st.title("🔍 ComplySight")
 
     st.write(
         "AI-powered corporate policy "
@@ -36,11 +36,11 @@ with st.sidebar:
 
     st.divider()
 
-    st.caption("PolicyLens V1")
+    st.caption("ComplySight V1")
 
 
 
-st.title("🔍 PolicyLens")
+st.title("🔍 ComplySight")
 
 st.caption(
     "AI-powered corporate policy compliance analyzer"
@@ -270,5 +270,5 @@ if analyze:
 st.divider()
 
 st.caption(
-    "PolicyLens · AI-powered policy compliance analysis · V1"
+    "ComplySight · AI-powered policy compliance analysis · V1"
 )
