@@ -1,0 +1,63 @@
+================================================================================
+ComplySight — Sample Requests & Test Scenarios
+================================================================================
+Use these pre-structured scenarios to test the ComplySight Streamlit UI or API.
+Each scenario has been verified end-to-end against the governing policy rules.
+
+Copy and paste each field directly into the Streamlit application.
+
+--------------------------------------------------------------------------------
+SCENARIO 1: COMPLIANT
+Policy Domain:    Password & Authentication Policy (§4.8, §6.1)
+Expected Verdict: COMPLIANT
+--------------------------------------------------------------------------------
+Employee Name:          Sarah Jenkins
+Department:             Engineering
+Request:                I am setting up a nightly ETL job that extracts data from the sales database. I have configured it to use a non-interactive service account. I haven't hardcoded the credentials into the Python script; instead, the script fetches the API token dynamically from our enterprise secret vault, which is configured to rotate the secret every 30 days.
+Reason:                 Need automated system access without interactive login.
+Additional Information: Non-interactive service account, enterprise secret vault integration with 30-day automated rotation.
+
+--------------------------------------------------------------------------------
+SCENARIO 2: NON_COMPLIANT
+Policy Domain:    Device Usage Policy (§4.4)
+Expected Verdict: NON_COMPLIANT
+--------------------------------------------------------------------------------
+Employee Name:          Sarah Jenkins
+Department:             Marketing
+Request:                I have downloaded and installed a peer-to-peer (P2P) file-sharing client on my company-issued laptop to help quickly distribute large promotional video files to our external media partners.
+Reason:                 Attempting to bypass email attachment size limits for large marketing assets.
+Additional Information: Installed BitTorrent client on company-issued laptop.
+
+--------------------------------------------------------------------------------
+SCENARIO 3: PARTIALLY_COMPLIANT
+Policy Domain:    Remote Work Policy (§4.1, §4.3, §4.5)
+Expected Verdict: PARTIALLY_COMPLIANT
+--------------------------------------------------------------------------------
+Employee Name:          David Kim
+Department:             Engineering
+Request:                I want to work remotely while taking care of my 2-year-old child during working hours. My remote work arrangement has been approved by my manager and HRBP. I have a dedicated workspace, VPN access, and a 100 Mbps internet connection.
+Reason:                 Requesting remote work while acting as the primary caregiver.
+Additional Information: Manager and HRBP approval secured, dedicated workspace verified.
+
+--------------------------------------------------------------------------------
+SCENARIO 4: INSUFFICIENT_EVIDENCE
+Policy Domain:    Device Usage Policy (§4.1, §4.2)
+Expected Verdict: INSUFFICIENT_EVIDENCE
+--------------------------------------------------------------------------------
+Employee Name:          Alex Rivera
+Department:             Marketing
+Request:                I would like to register my new personal smartphone to check work emails and corporate Slack channels under the BYOD policy.
+Reason:                 To stay responsive to marketing team notifications while away from my desk.
+Additional Information: Device meets minimum OS version requirements. (Missing MDM profile installation confirmation and lock passcode verification).
+
+--------------------------------------------------------------------------------
+SCENARIO 5: IRRELEVANT
+Policy Domain:    Out of Scope (No Governing Policy)
+Expected Verdict: IRRELEVANT
+--------------------------------------------------------------------------------
+Employee Name:          Samantha Reed
+Department:             Marketing
+Request:                Can the company HR team provide a 20% discount corporate promo code for the yoga and fitness center across the street?
+Reason:                 Inquiring about personal wellness gym membership discounts.
+Additional Information: Non-work related fitness perk inquiry.
+================================================================================

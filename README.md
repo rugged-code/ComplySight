@@ -115,14 +115,14 @@ The verdict is never asserted directly by the LLM — it's computed from the set
 ComplySight/
 ├── app.py                          # Streamlit entrypoint — request form, verdict rendering
 ├── requirements.txt                # Pinned project dependencies
+├── tryitout.txt                    # Ready-to-copy verified test scenarios for quick testing
 ├── assets/                         # Application screenshots, UI previews & demo media
 │   ├── demo.png                    # Hero banner / overview preview
 │   ├── request_form.png            # Request submission form screenshot
 │   ├── analysis_result.png         # Verdict & requirement breakdown screenshot
 │   └── evidence_citations.png      # Policy evidence expansion screenshot
 ├── docs/                           # Project documentation & evaluation analysis
-│   ├── evaluation.md               # In-depth benchmark analysis & edge case breakdown
-│   └── evaluation_results.json     # Raw 50-case benchmark output with retrieval & judge data
+│   └── evaluation.md               # In-depth benchmark analysis & edge case breakdown
 ├── data/
 │   ├── policies/                   # Source-of-truth Markdown policy documents (10 domains)
 │   └── evaluation/                 # Ground-truth JSON test cases, one file per policy domain (10 domains)
@@ -262,7 +262,7 @@ python tests/test_pipeline.py
 python tests/test_compliance_judge.py
 ```
 
-**Full ground-truth evaluation** — runs every case in `data/evaluation/*.json` through the live pipeline, in rate-limited batches (`BATCH_SIZE=10`, with delays tuned to Gemini's ~15 requests/minute free-tier limit), and writes `docs/evaluation_results.json` with expected vs. actual verdict per case:
+**Full ground-truth evaluation** — runs every case in `data/evaluation/*.json` through the live pipeline, in rate-limited batches (`BATCH_SIZE=10`, with delays tuned to Gemini's ~15 requests/minute free-tier limit), and writes `evaluation_results.json` with expected vs. actual verdict per case:
 
 ```bash
 python tests/test_evaluator.py
@@ -284,6 +284,22 @@ ComplySight was benchmarked against a 50-case ground-truth test suite spanning a
 | **Overall Total** | **34** | **50** | **68.0%** |
 
 > 📖 **Full Benchmark Report:** For domain-by-domain metrics, evaluation methodology, and edge-case analysis, see [docs/evaluation.md](docs/evaluation.md).
+
+---
+
+## 🧪 Try It Yourself (Sample Scenarios)
+
+You can test ComplySight immediately using these **verified test cases** covering every verdict type. Copy and paste each scenario directly into the Streamlit interface:
+
+| Scenario | Policy Domain | Key Request Detail | Expected Verdict |
+|---|---|---|:---:|
+| **1. Service Account Vault** | Password & Auth (§4.8, §6.1) | Dynamic vault token with 30-day automated rotation | `COMPLIANT` |
+| **2. P2P Client Install** | Device Usage (§4.4) | BitTorrent client on company laptop | `NON_COMPLIANT` |
+| **3. Remote Primary Caregiver** | Remote Work (§4.1, §4.5) | Approved WFH + VPN, but acts as sole daytime child caregiver | `PARTIALLY_COMPLIANT` |
+| **4. Incomplete BYOD** | Device Usage (§4.1, §4.2) | Smartphone registration missing MDM profile & passcode | `INSUFFICIENT_EVIDENCE` |
+| **5. Gym Discount Inquiry** | Out of Scope | Promo code inquiry for local yoga/fitness studio | `IRRELEVANT` |
+
+> 📋 **Quick Copy-Paste:** Full, pre-formatted input blocks for every field (Employee, Department, Request, Reason, Additional Info) are available in [tryitout.txt](tryitout.txt).
 
 ---
 
@@ -317,5 +333,10 @@ A near-identical request missing the manager approval, or citing a hotel rate ov
 <div align="center">
 
 *ComplySight — evidence in, verdict out, no hallucinated approvals.*
+
+<br/>
+
+Crafted with ☕ & 🤖 by **[Shrey](https://github.com/rugged-code)**  
+*Powered by Google Gemini, Qdrant & Jina AI*
 
 </div>
