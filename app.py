@@ -4,39 +4,112 @@ from src.pipeline import PolicyLensPipeline
 from src.models.schemas import ComplianceRequest
 
 
-st.set_page_config(page_title="PolicyLens",page_icon="🔍",layout="wide")
-
-
-pipeline = PolicyLensPipeline()
-st.title("PolicyLens")
-st.write("Corporate Policy Compliance Analyzer")
-
-st.divider()
-
-
-employee = st.text_input(
-    "Employee Name"
+st.set_page_config(
+    page_title="PolicyLens",
+    page_icon="🔍",
+    layout="wide"
 )
 
 
-department = st.selectbox("Department",["Engineering","Finance","HR","IT","Procurement","Sales","Marketing","Other"])
+pipeline = PolicyLensPipeline()
 
 
-request_text = st.text_area("Request",placeholder="Describe the action you are requesting...")
+
+with st.sidebar:
+
+    st.title("🔍 PolicyLens")
+
+    st.write(
+        "AI-powered corporate policy "
+        "compliance analyzer."
+    )
+
+    st.divider()
+
+    st.subheader("How it works")
+
+    st.write("1. Submit an employee request")
+    st.write("2. Retrieve relevant policies")
+    st.write("3. Rerank policy evidence")
+    st.write("4. Analyze compliance")
+    st.write("5. Generate a verdict")
+
+    st.divider()
+
+    st.caption("PolicyLens V1")
 
 
-reason = st.text_area("Reason",placeholder="Why are you making this request?")
 
+st.title("🔍 PolicyLens")
 
-additional_information = st.text_area("Additional Information",placeholder="Add approvals, context, or any other relevant information...")
-
+st.caption(
+    "AI-powered corporate policy compliance analyzer"
+)
 
 st.divider()
 
 
-if st.button("Analyze Request", type="primary"):
+
+
+with st.container(border=True):
+
+    st.subheader("📋 Compliance Request")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+
+        employee = st.text_input(
+            "Employee Name",
+            placeholder="e.g. Rahul Sharma"
+        )
+
+    with col2:
+
+        department = st.selectbox(
+            "Department",
+            [
+                "Engineering",
+                "Finance",
+                "HR",
+                "IT",
+                "Procurement",
+                "Sales",
+                "Marketing",
+                "Other"
+            ]
+        )
+
+    request_text = st.text_area(
+        "Request",
+        placeholder="Describe the action you are requesting...",
+        height=120
+    )
+
+    reason = st.text_area(
+        "Reason",
+        placeholder="Why are you making this request?",
+        height=100
+    )
+
+    additional_information = st.text_area(
+        "Additional Information",
+        placeholder="Add approvals, context, or other relevant information...",
+        height=100
+    )
+
+    analyze = st.button(
+        "🔍 Analyze Request",
+        type="primary",
+        use_container_width=True
+    )
+
+
+
+if analyze:
 
     if not employee or not request_text or not reason:
+
         st.warning(
             "Please provide the employee name, request, and reason."
         )
@@ -55,95 +128,129 @@ if st.button("Analyze Request", type="primary"):
 
             with st.spinner("Analyzing request..."):
 
-
                 result = pipeline.run(request)
+
 
 
             st.divider()
 
-            st.subheader("Compliance Verdict")
-
+            st.subheader("📊 Compliance Result")
 
             verdict = result.verdict.value
 
 
             if verdict == "COMPLIANT":
-                st.success(verdict)
+
+                st.success(
+                    f"✅ {verdict}"
+                )
 
             elif verdict == "PARTIALLY_COMPLIANT":
-                st.warning(verdict)
+
+                st.warning(
+                    f"⚠️ {verdict}"
+                )
 
             elif verdict == "NON_COMPLIANT":
-                st.error(verdict)
+
+                st.error(
+                    f"❌ {verdict}"
+                )
+
+            elif verdict == "INSUFFICIENT_EVIDENCE":
+
+                st.info(
+                    f"🔎 {verdict}"
+                )
 
             else:
-                st.info(verdict)
+
+                st.info(
+                    f"ℹ️ {verdict}"
+                )
 
 
-            st.subheader("Explanation")
 
-            st.write(result.explanation)
+            with st.expander(
+                "📝 Explanation",
+                expanded=True
+            ):
+
+                st.write(result.explanation)
+
 
 
             if result.requirements:
 
-                st.subheader("Requirements")
+                st.subheader("📌 Requirements")
 
                 for requirement in result.requirements:
 
                     if requirement.status.value == "SATISFIED":
+
                         icon = "✅"
 
                     elif requirement.status.value == "NOT_SATISFIED":
+
                         icon = "❌"
 
                     else:
+
                         icon = "⚠️"
 
-                    st.write(
-                        f"{icon} **Section {requirement.section}**"
-                    )
 
-                    st.write(
-                        f"**Status:** {requirement.status.value}"
-                    )
+                    with st.expander(
+                        f"{icon} Section {requirement.section} · "
+                        f"{requirement.status.value}"
+                    ):
 
-                    st.write(requirement.description)
+                        st.write(
+                            requirement.description
+                        )
 
-                    st.caption(
-                        f"Rationale: {requirement.rationale}"
-                    )
+                        st.caption(
+                            f"Rationale: {requirement.rationale}"
+                        )
 
-                    st.divider()
 
 
             if result.violations:
 
-                st.subheader("Violations")
+                st.subheader("❌ Violations")
 
                 for violation in result.violations:
-                    st.error(violation)
+
+                    st.error(
+                        violation
+                    )
+
 
 
             if result.missing_evidence:
 
-                st.subheader("Missing Evidence")
+                st.subheader("🔎 Missing Evidence")
 
                 for item in result.missing_evidence:
-                    st.warning(item)
+
+                    st.warning(
+                        item
+                    )
+
 
 
             if result.evidence:
 
-                st.subheader("Policy Evidence")
+                st.subheader("📚 Policy Evidence")
 
                 for item in result.evidence:
 
                     with st.expander(
-                        f"{item.policy} §{item.section}"
+                        f"📄 {item.policy} · Section {item.section}"
                     ):
 
-                        st.write(item.content)
+                        st.write(
+                            item.content
+                        )
 
                         st.caption(
                             f"Source: {item.source}"
@@ -157,3 +264,11 @@ if st.button("Analyze Request", type="primary"):
             )
 
             st.exception(e)
+
+
+
+st.divider()
+
+st.caption(
+    "PolicyLens · AI-powered policy compliance analysis · V1"
+)
