@@ -121,7 +121,8 @@ ComplySight/
 │   ├── analysis_result.png         # Verdict & requirement breakdown screenshot
 │   └── evidence_citations.png      # Policy evidence expansion screenshot
 ├── docs/                           # Project documentation & evaluation analysis
-│   └── evaluation.md               # In-depth benchmark analysis & edge case breakdown
+│   ├── evaluation.md               # In-depth benchmark analysis & edge case breakdown
+│   └── evaluation_results.json     # Raw 50-case benchmark output with retrieval & judge data
 ├── data/
 │   ├── policies/                   # Source-of-truth Markdown policy documents (10 domains)
 │   └── evaluation/                 # Ground-truth JSON test cases, one file per policy domain (10 domains)
@@ -261,7 +262,7 @@ python tests/test_pipeline.py
 python tests/test_compliance_judge.py
 ```
 
-**Full ground-truth evaluation** — runs every case in `data/evaluation/*.json` through the live pipeline, in rate-limited batches (`BATCH_SIZE=10`, with delays tuned to Gemini's ~15 requests/minute free-tier limit), and writes `evaluation_results.json` with expected vs. actual verdict per case:
+**Full ground-truth evaluation** — runs every case in `data/evaluation/*.json` through the live pipeline, in rate-limited batches (`BATCH_SIZE=10`, with delays tuned to Gemini's ~15 requests/minute free-tier limit), and writes `docs/evaluation_results.json` with expected vs. actual verdict per case:
 
 ```bash
 python tests/test_evaluator.py

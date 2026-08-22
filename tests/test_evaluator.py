@@ -13,7 +13,7 @@ from src.analysis.compliance_judge import ComplianceJudge
 
 
 TEST_CASE_DIR = Path("data/evaluation")
-OUTPUT_FILE = "evaluation_results.json"
+OUTPUT_FILE = "docs/evaluation_results.json"
 
 BATCH_SIZE = 10
 BATCH_DELAY = 30    # seconds between batches
